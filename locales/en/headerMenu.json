@@ -1,0 +1,247 @@
+[
+  {
+    "name": "About",
+    "megamenu": true,
+    "link": "/about",
+    "content": [
+       {
+        "title": "About",
+        "slug": "about",
+        "categories": [
+            {
+              "title": "Our Journey",
+              "slug": "our-journey"
+            },
+            {
+              "title": "Milestones",
+              "slug": "milestones"
+            },
+            {
+              "title": "Our Vision",
+              "slug": "our-vision"
+            },
+            {
+              "title": "Leadership",
+              "slug": "leadership"
+            },
+            {
+              "title": "Founder’s Legacy",
+              "slug": "founders-legacy"
+            }
+          ]
+        }
+      ]
+  },
+  {
+  "name": "Businesses",
+  "megamenu": true,
+  "link": "/businesses",
+  "content": [
+    {
+      "title": "Salt",
+      "slug": "salt",
+      "categories": [
+        {
+        "title": "Food Grade Salts",
+        "slug": "food-grade-salts",
+        "description": "Edible Salt meets all prescribed IDD (Iodine Deficiency Disorder) standards and is exported to markets worldwide. It is fine, free-flowing, tasty, healthy, and perfectly suited for everyday cooking needs. Fortified with iodine above natural levels, it not only enhances flavor but also supports overall health.",
+        "applications": [
+          {
+            "type": "Households",
+            "use": "Daily cooking and seasoning."
+          },
+          {
+            "type": "Hospitality",
+            "use": "Hotels, restaurants, and catering services"
+          },
+          {
+            "type": "Food Processing",
+            "use": "Bakery products, dairy processing, and beverage production."
+          },
+          {
+            "type": "Food Supplements",
+            "use": "Used in nutritional and fortified food products."
+          }
+        ],
+        "note": "Refined Iodized Salt plays a vital role in both flavor enhancement and nutrition enrichment, making it an indispensable ingredient for kitchens and food industries around the world."
+      },
+      {
+        "title": "Industrial Salt",
+        "slug": "industrial-salt",
+        "description": "Industrial Salt is a vital raw material with a wide range of applications across multiple sectors. Known for its purity and freshness, our salt is trusted in both domestic and international markets.",
+        "applications": [
+          {
+            "type": "Pure Salt",
+            "use": "Widely used in textile, hosiery, and dyeing industries."
+          },
+          {
+            "type": "Crystalline Salt",
+            "use": "In demand in pharmaceuticals, paints and distempers, dyes and chemicals, intermediate UV fluid industries, drilling applications, and more."
+          },
+          {
+            "type": "Medium Grade Salt",
+            "use": "Serves the needs of dye, chemical, seafood, and frozen food companies."
+          },
+          {
+            "type": "Super Fine Salt",
+            "use": "Popular in soap manufacturing, chemical industries and ayurvedic preparations."
+          },
+          {
+            "type": "30 Mesh Salt",
+            "use": "Essential for producing detergents and washing powders."
+          },
+          {
+            "type": "Oversize Salt",
+            "use": "Required in explosive manufacturing, specialty chemical production, granite polishing, and drilling operations"
+          }
+        ],
+        "note": "With its variety of grades and applications, industrial salt remains an indispensable material for countless manufacturing processes worldwide."
+      },
+      {
+        "title": "Crystal Raw Salt",
+        "slug": "crystal-raw-salt",
+        "description": "Natural Crystal (Raw) Salt is the most basic and essential condiment, obtained through the simple evaporation of seawater without artificial techniques. It is rich in a wide range of naturally occurring minerals that no synthetic supplement can truly match, regardless of how precisely formulated.",
+        "applications": [
+          {
+            "type": "Fishing Industry",
+            "use": "Used on fishing vessels for fish preservation, maintaining fish health during transport, and protecting against corrosion caused by seawater"
+          },
+          {
+            "type": "Water Softening",
+            "use": "Helps reduce hardness in water, making it suitable for domestic and industrial use"
+          },
+          {
+            "type": "Chemical Industry",
+            "use": "Serves as a raw material in various manufacturing processes."
+          },
+          {
+            "type": "Leather Industry",
+            "use": "Used in curing hides and skins to prevent decay before processing."
+          },
+          {
+            "type": "De Icing / Ice melting",
+            "use": "High-performance De-icing Salt for quick melting of snow and ice. Keeps roads, pathways, and driveways safe, reducing slips and accidents during winter"
+          }
+        ],
+        "note": "Its versatility and natural mineral content make crystal salt an invaluable resource for both traditional and industrial purposes."
+      },
+      {
+        "title": "Water Softening Salt (Pool)",
+        "slug": "water-softening-salt",
+        "description": "High-purity Water Softening Salt that removes hardness-causing minerals. Protects appliances, prevents scale buildup, and delivers pure, soft water for home and industry"
+      }
+      ]
+    },
+    {
+  "title": "Minerals",
+      "slug": "minerals",
+      "categories": [
+        {
+          "title": "Garnet Abrasive",
+          "slug": "garnet-abrasive",
+          "products": [
+            {
+              "title": "Garnet Sand 80 Mesh",
+              "slug": "garnet-sand-80-mesh",
+              "image": "/images/products/garnet-sand-80-large.webp",
+              "shortDescription": "High-performance garnet abrasive for waterjet cutting.",
+              "description": "Durable and sharp garnet sand, widely used for waterjet cutting, sandblasting, and surface preparation across industries."
+            }
+          ]
+        },
+        {
+          "title": "Talc",
+          "slug": "talc",
+          "products": [
+            {
+              "title": "Talc Powder",
+              "slug": "talc-powder",
+              "image": "/images/products/talc-powder-large.webp",
+              "shortDescription": "Soft mineral powder used in cosmetics and industry.",
+              "description": "Talc powder is valued for its smoothness, chemical inertness, and softness, making it ideal for cosmetics, paints, plastics, and ceramics."
+            }
+          ]
+        },
+        {
+          "title": "Quartz",
+          "slug": "quartz",
+          "products": [
+            {
+              "title": "Quartz Lumps",
+              "slug": "quartz-lumps",
+              "image": "/images/products/quartz-lumps-large.webp",
+              "shortDescription": "High-purity quartz for glass and ceramics.",
+              "description": "Quartz is one of the most abundant minerals, used in glassmaking, ceramics, foundry molds, and electronics due to its high silica content."
+            }
+          ]
+        },
+        {
+          "title": "Bentonite",
+          "slug": "bentonite",
+          "products": [
+            {
+              "title": "Bentonite Powder",
+              "slug": "bentonite-powder",
+              "image": "/images/products/bentonite-powder-large.webp",
+              "shortDescription": "Absorbent clay used in drilling, binding, and purification.",
+              "description": "Bentonite is a naturally occurring clay with high swelling and absorption capacity, widely used in drilling mud, foundry sand, iron ore pelletization, and water purification."
+            }
+          ]
+        },
+        {
+          "title": "Dolomite",
+          "slug": "dolomite",
+          "products": [
+            {
+              "title": "Dolomite Powder",
+              "slug": "dolomite-powder",
+              "image": "/images/products/dolomite-powder-large.webp",
+              "shortDescription": "Calcium magnesium carbonate for industry.",
+              "description": "Dolomite powder is used in steelmaking, glass, ceramics, and agriculture as a source of calcium and magnesium. It improves soil quality and neutralizes acidity."
+            }
+          ]
+        },
+        {
+          "title": "Feldspar",
+          "slug": "feldspar",
+          "products": [
+            {
+              "title": "Potash Feldspar",
+              "slug": "potash-feldspar",
+              "image": "/images/products/potash-feldspar-large.webp",
+              "shortDescription": "Essential mineral for ceramics and glass.",
+              "description": "Potash feldspar is widely used in ceramics, glass, and enamel industries due to its fluxing properties, which enhance strength and durability."
+            }
+          ]
+        },
+        {
+          "title": "Calcined Kaolin",
+          "slug": "calcined-kaolin",
+          "products": [
+            {
+              "title": "Calcined Kaolin Powder",
+              "slug": "calcined-kaolin-powder",
+              "image": "/images/products/calcined-kaolin-large.webp",
+              "shortDescription": "Refined clay mineral for industrial applications.",
+              "description": "Calcined kaolin is produced by heating natural kaolin, enhancing brightness and chemical resistance. It is used in paper, paints, plastics, and rubber industries."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+,
+  {
+    "name": "News & Media",
+    "link": "/news-media"
+  },
+  {
+    "name": "Our Catalogue",
+    "link": "/catalogue"
+  },
+  {
+    "name": "Contact Us",
+    "link": "/contact"
+  }
+]

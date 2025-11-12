@@ -1,0 +1,1339 @@
+{
+  "about": {
+    "our-journey": {
+      "slug": "our-journey",
+      "title": "Our Journey",
+      "content": "Namakwala's journey began in 1945 in Bhilwara, India, when visionary entrepreneur Late Shri Badrilal Lohia laid the foundation of what would become a global enterprise. Starting with Crystal Salt, he pioneered the concept of processed, manufactured, and consumer-packed salt in India—a revolutionary innovation for its time. Over eight decades, his successors have carried forward this legacy of innovation and excellence, transforming Namakwala into one of India's foremost exporters in the salt and mineral industry. 'Purity, Quality, Trust... Since 1945' - this philosophy continues to guide every aspect of our operations today.",
+      "banner": {
+        "title": "About",
+        "heading": "Dedication | Growth | Passion",
+        "image": "/optimized/pagebanner/namakwala-about-us-medium.webp"
+      },
+      "sections": {
+        "milestones": {
+          "slug": "milestones",
+          "title": "Key Milestones",
+          "content": [
+            "1945 – Established by Late Shri Badrilal Lohia in Bhilwara, Rajasthan.",
+            "1960 – Began professional salt grinding.",
+            "1970 – Introduced consumer salt packs, a first in India.",
+            "1980 – Expanded into bulk trade and industrial salts, strengthening domestic presence.",
+            "2000 – Entered global markets, building strong export relationships.",
+            "Today – Recognized as a trusted global supplier of salt and minerals, serving 21+ countries worldwide."
+          ],
+          "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1470&q=80"
+        },
+        "our-vision": {
+          "slug": "our-vision",
+          "title": "Our Vision",
+          "content": "To be a global leader in salt and mineral solutions, combining tradition with innovation. We aim to provide sustainable, high-quality products while creating long-term value for customers and partners worldwide.",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+        },
+        "leadership": {
+          "slug": "leadership",
+          "title": "Leadership",
+          "content": "Namakwala is driven by an experienced leadership team that blends decades of expertise with a forward-looking approach. Guided by our founder’s principles, we continue to innovate, expand, and build strong global partnerships.",
+          "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1470&q=80"
+        },
+        "founder-legacy": {
+          "slug": "founder-legacy",
+          "title": "Founder’s Legacy",
+          "content": "Our journey began with Late Shri Badrilal Lohia, who pioneered the concept of consumer salt packs in India. His vision and dedication laid the foundation for Namakwala’s global success. Today, his legacy of purity, quality, and trust continues to inspire us.",
+          "image": "https://images.unsplash.com/photo-1534126511673-b6899657816a?auto=format&fit=crop&w=1470&q=80"
+        }
+      }
+    }
+  },
+  "businesses": {
+    "salt": {
+      "food-grade-salt": {
+        "title": "Food Grade Salt",
+        "slug": "food-grade-salt",
+        "description": "Namakwala’s bring you premium-quality Food Grade Salts that are not just tasty but also healthy. Our Edible Salt meets all prescribed IDD (Iodine Deficiency Disorder) standards and is trusted by households and industries worldwide. Free-flowing, fine in texture, and perfectly balanced in taste, it’s an essential ingredient for everyday cooking and large-scale food production.\n\nFortified with iodine above natural levels, our Food Grade Salt goes beyond enhancing flavor—it supports overall wellness and nutritional needs. Carefully processed to maintain purity and natural minerals, it guarantees both quality and consistency in every grain.\n\nTrusted globally by chefs, home kitchens, and food manufacturers, Namakwala Food Grade Salts deliver the perfect blend of taste, health, and reliability.",
+        "banner": {
+          "title": "Premium Salt manufacturer & exporter from India",
+          "heading": "Healthy, Tasty & Consistent – Food Grade Salt for Every Need",
+          "image": "/optimized/pagebanner/namakwala-salt-banner-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-food-grade-salt-medium.webp",
+        "keyFeatures": [
+          { "feature": "100% Natural & Pure", "detail": "Free from harmful additives and contaminants." },
+          { "feature": "Rich in Essential Minerals", "detail": "Contains sodium, calcium, magnesium, and potassium." },
+          { "feature": "Multiple Variants Available", "detail": "Refined iodized salt and more." },
+          { "feature": "International Standards", "detail": "Processed under strict hygiene & quality control." },
+          { "feature": "Custom Packaging", "detail": "Available in consumer packs and bulk packaging." }
+        ],
+        "applications": [
+          { "type": "Household Cooking & Seasoning", "use": "Essential for everyday meals and seasoning." },
+          { "type": "Hospitality Industry", "use": "Restaurants, hotels, and catering services." },
+          { "type": "Food Processing & Manufacturing", "use": "Packaged foods, snacks, and ready-to-eat meals." },
+          { "type": "Nutritional & Food Supplements", "use": "Blended in fortified and dietary supplements." },
+          { "type": "Bakery, Snacks & Confectionery", "use": "Maintains taste, texture, and preservation." },
+          { "type": "Meat, Seafood & Pickle Curing", "use": "Ensures preservation and flavor balance." },
+          { "type": "Dairy, Sauces & Ready-to-Eat Foods", "use": "Improves flavor, preservation, and consistency." }
+        ],
+        "technicalSpecifications": {
+          "Appearance": "White crystalline powder/granules",
+          "Grades Available": "Refined iodized salt, specialty food-grade salts",
+          "Purity": "99% NaCl minimum",
+          "Moisture Content": "<0.4%",
+          "Iodine Content": "As per customer requirement (30 ppm typical)",
+          "Packaging Options": "500g, 1 kg, 25 kg, 50 kg,  Jumbo Bags",
+          "Shelf Life": "24 months"
+        },
+        "specNote": "Specifications and packaging can be customized as per customer needs.",
+        "note": "Namakwala is a leading food grade salt exporter from India, supplying edible salts to Asia, Middle East, Africa, Europe & America. High purity, hygienic packaging & timely delivery guaranteed.",
+        "metadata": {
+          "title": "Food Grade Salt - Namakwala",
+          "description": "Premium Food Grade Salt fortified with iodine and trusted worldwide for everyday cooking, hospitality, and food processing.",
+          "keywords": "food grade salt, edible salt, iodized salt, Namakwala, cooking salt, industrial food salt",
+          "authors": [{ "name": "Namakwala Group" }],
+          "openGraph": {
+            "title": "Food Grade Salt - Namakwala",
+            "description": "Premium Food Grade Salt fortified with iodine and trusted worldwide for everyday cooking, hospitality, and food processing.",
+            "url": "https://www.namakwala.in/food-grade-salt",
+            "siteName": "Namakwala Group",
+            "images": [
+              {
+                "url": "/optimized/products/namakwala-food-grade-salt-medium.webp",
+                "width": 800,
+                "height": 600
+              }
+            ],
+            "locale": "en_US",
+            "type": "website"
+          },
+          "twitter": {
+            "card": "summary_large_image",
+            "title": "Food Grade Salt - Namakwala",
+            "description": "Premium Food Grade Salt fortified with iodine and trusted worldwide for everyday cooking, hospitality, and food processing.",
+            "images": ["/optimized/products/namakwala-food-grade-salt-medium.webp"]
+          }
+        }
+      },
+      "industrial-salt": {
+        "title": "Industrial Salt",
+        "banner": {
+          "title": "Industrial Salt",
+          "heading": "Premium-Grade Raw Material for Global Industries",
+          "image": "/optimized/products/namakwala-industrial-salt-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-industrial-salt-medium.webp",
+        "description": "Namakwala’s Industrial Salt is one of the most essential raw materials powering a wide range of industries worldwide. Known for its purity, freshness, and consistent quality, our salt is trusted across both domestic and international markets.\n\nWe specialize in supplying premium-grade Industrial Salt that meets stringent quality standards. Processed under strict quality control, our salts are carefully classified into different grades to serve diverse industrial needs: Pure Salt, Crystalline Salt, Medium Grade Salt, Super Fine Salt, 30 Mesh Salt, and Coarse (Oversize) Salt.\n\nWith accurate composition, consistent purity, and bulk availability, Namakwala Industrial Salt ensures efficiency, reliability, and cost-effectiveness for industries worldwide. Trusted by global manufacturers, we deliver salt that performs beyond expectations in every application.",
+        "keyFeatures": [
+          { "feature": "High Purity & Consistency", "detail": "Ensures reliability and effectiveness in industrial applications." },
+          { "feature": "Free-Flowing & Moisture-Controlled", "detail": "Maintains stability and easy handling in bulk usage." },
+          { "feature": "Different Granule Sizes", "detail": "Available in fine, medium, coarse, and mesh-specific grades." },
+          { "feature": "Eco-Friendly & Safe", "detail": "Processed under strict quality and safety standards." },
+          { "feature": "Bulk Packaging Options", "detail": "Supplied in large industrial packaging for global supply." }
+        ],
+        "applications": [
+          { "type": "Chemical Industry", "use": "Used for caustic soda, chlorine, soda ash & hydrochloric acid production." },
+          { "type": "Textile & Dyeing", "use": "Essential in dyeing, bleaching, and finishing processes." },
+          { "type": "Detergent & Soap Manufacturing", "use": "Core ingredient in detergent powders, soaps, and cleaning agents." },
+          { "type": "Leather Industry", "use": "Widely applied in tanning & curing of hides." },
+          { "type": "Water Treatment", "use": "Used in water softening and purification solutions." },
+          { "type": "De-icing & Road Safety", "use": "Effective for melting ice and snow in cold regions." }
+        ],
+        "technicalSpecifications": {
+          "Appearance": "White crystalline powder/granules",
+          "Grades Available": "Pure Salt, Crystalline Salt, Medium Grade Salt, Super Fine Salt, 30 Mesh Salt, Coarse (Oversize) Salt",
+          "Purity": "High consistency across all grades",
+          "Moisture Content": "Controlled for free-flowing properties",
+          "Iodine Content": "Non-iodized, suitable for industrial applications",
+          "Packaging Options": "25 kg, 50 kg,  Jumbo Bags",
+          "Shelf Life": "24 months"
+        },
+        "specNote": "Specifications and grades can be customized based on industrial requirements",
+        "note": "Namakwala is a trusted industrial salt exporter from India, supplying bulk salt to Asia, Middle East, Africa, Europe. Reliable logistics, competitive pricing & consistent quality."
+      },
+      "crystal-raw-salt": {
+        "title": "Crystal Raw Salt",
+        "banner": {
+          "title": "Crystal Raw Salt",
+          "heading": "Naturally Harvested, Mineral-Rich Raw Salt",
+          "image": "/optimized/products/namakwala-Crystal-Raw-Salt1.webp"
+        },
+        "productImage": "/optimized/products/namakwala-Crystal-Raw-Salt1.webp",
+        "description": "Namakwala’s Natural Crystal Salt, also known as Raw Salt, is the purest form of salt obtained through the natural evaporation of seawater—without the use of artificial methods. Packed with a wide range of naturally occurring minerals, it offers benefits and richness that no synthetic supplement can truly replicate.\n\nAt Namakwala Group, we take pride in supplying high-quality Crystal Raw Salt that is naturally harvested and carefully processed to retain its purity, texture, and mineral content. Our raw salt crystals are widely trusted for both industrial and commercial applications around the globe.\n\nWith its authentic mineral profile, natural freshness, and versatile usage, Namakwala Crystal Raw Salt is the go-to choice for industries and businesses seeking reliability and quality in bulk salt supply.",
+        "keyFeatures": [
+          { "feature": "Naturally Harvested & Sun-Dried", "detail": "Obtained through natural seawater evaporation without artificial processing." },
+          { "feature": "High Purity & Mineral Rich", "detail": "Packed with naturally occurring minerals that enhance its value." },
+          { "feature": "Available in Different Crystal Sizes", "detail": "Supplied in small, medium, and large crystals." },
+          { "feature": "Free from Harmful Impurities", "detail": "Ensures safe and reliable usage across industries." },
+          { "feature": "Moisture-Controlled", "detail": "Processed to maintain stability and longer shelf life." }
+        ],
+        "applications": [
+          { "type": "Fishing Industry", "use": "Ideal for fish preservation and storage." },
+          { "type": "Water Softening Solutions", "use": "Effective in reducing hardness of water." },
+          { "type": "Chemical Industry", "use": "Raw material for caustic soda, soda ash, and chlorine production." },
+          { "type": "Leather Industry", "use": "Applied in curing and processing of hides." },
+          { "type": "Water Treatment", "use": "Used in purification and softening processes." },
+          { "type": "De-icing & Road Safety", "use": "Applied to melt ice and snow in cold regions." }
+        ],
+        "technicalSpecifications": {
+          "Appearance": "White Crystal granules",
+          "Grades Available": "Small, Medium, Large crystals",
+          "Purity": "High mineral content, naturally preserved",
+          "Moisture Content": "Controlled for long shelf life",
+          "Iodine Content": "Naturally occurring trace iodine, non-iodized",
+          "Packaging Options": "25 kg, 50 kg,  Jumbo Bags",
+          "Shelf Life": "36 months"
+        },
+        "specNote": "Specifications and crystal sizes can be customized to meet industrial requirements",
+        "note": "Namakwala exports premium crystal raw salt from India to Asia, Middle East, Africa, Europe & America. Trusted supplier for bulk industries & FMCG brands with assured quality & timely delivery."
+      },
+      "water-softening-salt": {
+        "title": "Water Softening / Pool / Tablet Salt",
+        "slug": "water-softening-salt",
+        "description": "Namakwala’s Water Softening, Pool, and Tablet Salt is premium-grade salt designed to keep swimming pools and spa systems fresh, clean, and inviting. Processed to achieve high purity, fast solubility, and consistent crystal size, our pool salt is the perfect match for saltwater pools and chlorination systems.\n\nSafe, gentle, and eco-friendly, Namakwala Pool Salt ensures crystal-clear water while protecting both swimmers and pool equipment. Its balanced formulation helps maintain effective chlorination levels, reduces chemical usage, and keeps water naturally refreshing.\n\nTrusted by pool owners, resorts, and wellness centers, Namakwala Pool Salt guarantees a refreshing swimming experience with purity you can rely on.",
+        "banner": {
+          "title": "Premium Pool & Water Softening Salt Supplier",
+          "heading": "Crystal-Clear Water, Gentle & Effective Salt Solutions",
+          "image": "/optimized/products/namakwala-pool-salt-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-tablet-salt-medium.webp",
+        "keyFeatures": [
+          { "feature": "High Purity", "detail": "99%+ pure sodium chloride (NaCl) for safe and effective pool use." },
+          { "feature": "Quick Dissolving", "detail": "Free-flowing salt that dissolves rapidly for immediate results." },
+          { "feature": "Chemical-Free & Non-Iodized", "detail": "Safe, natural salt without additives or harmful chemicals." },
+          { "feature": "Skin & Equipment Friendly", "detail": "Gentle on skin, eyes, and hair while preventing corrosion and scaling in pool systems." },
+          { "feature": "Eco-Friendly", "detail": "Supports sustainable pool maintenance with reduced chemical usage." },
+          { "feature": "Convenient Packaging", "detail": "Available in multiple bulk packaging sizes for residential and commercial needs." }
+        ],
+        "applications": [
+          { "type": "Saltwater Pools & Spas", "use": "For use with chlorine generators in swimming pools and spa systems." },
+          { "type": "Water Softening", "use": "Helps maintain balanced mineral levels in pool water." },
+          { "type": "Sanitation & Disinfection", "use": "Ensures clean, safe, and bacteria-free swimming water." },
+          { "type": "Residential & Commercial Pools", "use": "Suitable for hotels, resorts, waterparks, wellness centers, and home pools." }
+        ],
+        "technicalSpecifications": {
+          "Appearance": "White crystalline granules",
+          "Grades Available": "Pool salt, water softening tablets, granular and compacted forms",
+          "Purity": "99%+ NaCl minimum",
+          "Moisture Content": "<0.4%",
+          "Iodine Content": "Non-iodized (ideal for pools and softening use)",
+          "Packaging Options": "10 kg, 20 kg, 25 kg, 50 kg,  Jumbo Bags",
+          "Shelf Life": "24 months"
+        },
+        "specNote": "Formulation and packaging can be customized for residential or commercial pool requirements.",
+        "note": "Namakwala exports premium pool salt and water softening salt from India to Asia, Middle East, Africa, Europe & America. High-purity, consistent quality & timely delivery for bulk and retail buyers.",
+        "metadata": {
+          "title": "Water Softening & Pool Salt - Namakwala",
+          "description": "Premium water softening, pool, and tablet salts for crystal-clear water and eco-friendly maintenance.",
+          "keywords": "pool salt, water softening salt, tablet salt, Namakwala, swimming pool salt, spa salt",
+          "authors": [{ "name": "Namakwala Group" }],
+          "openGraph": {
+            "title": "Water Softening & Pool Salt - Namakwala",
+            "description": "Premium water softening, pool, and tablet salts for crystal-clear water and eco-friendly maintenance.",
+            "url": "https://www.namakwala.in/water-softening-salt",
+            "siteName": "Namakwala Group",
+            "images": [
+              {
+                "url": "/optimized/products/namakwala-pool-salt-medium.webp",
+                "width": 800,
+                "height": 600
+              }
+            ],
+            "locale": "en_US",
+            "type": "website"
+          },
+          "twitter": {
+            "card": "summary_large_image",
+            "title": "Water Softening & Pool Salt - Namakwala",
+            "description": "Premium water softening, pool, and tablet salts for crystal-clear water and eco-friendly maintenance.",
+            "images": ["/optimized/products/namakwala-pool-salt-medium.webp"]
+          }
+        }
+      }
+    },
+    "minerals": {
+      "garnet-abrasive": {
+        "title": "Garnet Abrasive",
+        "banner": {
+          "title": "Delivering high-quality, Sustainable Minerals",
+          "heading": "Industrial Minerals exporter India",
+          "image": "/optimized/pagebanner/namakwala-minerals.webp"
+        },
+        "productImage": "/optimized/products/namakwala-garnet-abrasive-medium.webp",
+        "description": "Garnet Abrasive is a natural mineral abrasive derived from almandine garnet, known for its hardness, durability, and high specific gravity. With a Mohs hardness of 7.5–8, Garnet is one of the most effective and eco-friendly abrasives used in waterjet cutting, sandblasting, surface preparation, filtration, and abrasive powders.\n\nUnlike silica sand, Garnet is free from hazardous crystalline silica, making it safer, cleaner, and more efficient for industrial applications. We supply high-quality Garnet Abrasive grains and powders in multiple mesh sizes to meet diverse industry requirements.",
+        "keyFeatures": [
+          { "feature": "High Hardness & Durability", "detail": "Mohs hardness of 7.5–8 ensures fast cutting and cleaning." },
+          { "feature": "Eco-Friendly & Recyclable", "detail": "Can be reused multiple times in blasting and cutting." },
+          { "feature": "Silica-Free", "detail": "Safe for workers, reduces health risks compared to silica sand." },
+          { "feature": "High Productivity", "detail": "Delivers faster cutting and superior surface finish." },
+          { "feature": "Consistent Grain Size", "detail": "Ensures stable performance across applications." },
+          { "feature": "Versatile Applications", "detail": "Available in coarse, medium, and fine mesh grades." }
+        ],
+        "applications": [
+          { "type": "Waterjet Cutting", "use": "Provides precise, fast, and clean cutting for metals, stone, and composites." },
+          { "type": "Abrasive Blasting & Surface Preparation", "use": "Efficient cleaning and surface finishing." },
+          { "type": "Filtration Media", "use": "Used in water filtration for its durability and stability." },
+          { "type": "Abrasive Powders & Polishing", "use": "Ideal for fine polishing and grinding applications." }
+        ],
+        "technicalSpecifications": {
+          "Mohs Hardness": "7.5 – 8",
+          "Specific Gravity": "4.0 – 4.2 g/cm³",
+          "Bulk Density": "2.3 – 2.5 g/cm³",
+          "Chloride Content": "<25 ppm",
+          "Conductivity": "<25 µS/cm",
+          "Mesh Sizes Available": "12/24, 20/40, 30/60, 80, 120, 200 (customizable)"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Garnet Abrasive is a safe, silica-free, and eco-friendly mineral abrasive, offering high cutting efficiency, reusability, and consistent performance across multiple industrial applications."
+      },
+      "talc": {
+        "title": "Talc",
+        "banner": {
+          "title": "Talc",
+          "heading": "Softest Mineral for Industrial & Consumer Applications",
+          "image": "/optimized/products/namakwala-talc-powder-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-talc-powder-medium.webp",
+        "description": "Talc (Mg₃Si₄O₁₀(OH)₂) is a naturally occurring mineral composed of magnesium, silicon, and oxygen. Known as the softest mineral on the Mohs scale (hardness: 1), Talc is valued for its smoothness, chemical inertness, lubricating properties, and high whiteness.\n\nIt is widely used in paints, plastics, paper, rubber, cosmetics, ceramics, pharmaceuticals, and agriculture. We supply high-purity Talc Powder and Talc Lumps in different grades to meet diverse industrial applications.",
+        "keyFeatures": [
+          { "feature": "Softest Mineral", "detail": "Provides smooth texture and lubricity." },
+          { "feature": "High Whiteness & Brightness", "detail": "Ideal for paints, coatings, and paper." },
+          { "feature": "Excellent Absorption", "detail": "Absorbs moisture, oils, and impurities." },
+          { "feature": "Chemical Inertness", "detail": "Resistant to acids and alkalis." },
+          { "feature": "Thermal Resistance", "detail": "Stable at high temperatures, suitable for ceramics and refractories." },
+          { "feature": "Non-Toxic & Eco-Friendly", "detail": "Safe for cosmetics, pharmaceuticals, and food-grade applications." }
+        ],
+        "applications": [
+          { "type": "Paints & Coatings", "use": "Provides smoothness, brightness, and opacity." },
+          { "type": "Plastics & Rubber", "use": "Improves strength, stiffness, and processing." },
+          { "type": "Paper Industry", "use": "Enhances smoothness, printability, and opacity." },
+          { "type": "Cosmetics & Personal Care", "use": "Used in powders, creams, and personal care products." },
+          { "type": "Ceramics & Refractories", "use": "Improves thermal resistance and durability." },
+          { "type": "Pharmaceuticals & Food Industry", "use": "Safe, non-toxic additive for specialized uses." }
+        ],
+        "technicalSpecifications": {
+          "Whiteness": "85–97%",
+          "SiO₂ (Silica)": "55–62%",
+          "MgO (Magnesium Oxide)": "28–32%",
+          "CaO (Calcium Oxide)": "<1%",
+          "Fe₂O₃ (Iron Oxide)": "<0.5%",
+          "Moisture Content": "<0.5%",
+          "Mesh Sizes": "200, 300, 400, 500 (customizable on request)"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Talc is valued for its smoothness, high whiteness, and inertness, making it indispensable in paints, plastics, cosmetics, ceramics, and pharmaceutical industries."
+      },
+      "quartz": {
+        "title": "Quartz",
+        "banner": {
+          "title": "Quartz",
+          "heading": "High Purity Mineral for Industrial Applications",
+          "image": "/optimized/products/namakwala-quartz-powder-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-quartz-powder-medium.webp",
+        "description": "Quartz is one of the most abundant and widely used minerals on earth, valued for its high purity, hardness, chemical resistance, and optical properties. With a hardness of 7 on the Mohs scale, Quartz is an essential raw material in industries such as glass, ceramics, foundry, electronics, construction, and solar energy.\n\nWe supply premium-quality Quartz Lumps, Grains, and Powder in various grades and mesh sizes, suitable for diverse industrial applications.",
+        "keyFeatures": [
+          { "feature": "High Purity & Whiteness", "detail": "Available in >99% SiO₂ grades." },
+          { "feature": "Hardness & Durability", "detail": "Mohs hardness of 7, highly wear-resistant." },
+          { "feature": "Excellent Transparency & Optical Properties", "detail": "Used in glass, lenses, and solar applications." },
+          { "feature": "Chemical Resistance", "detail": "Inert to acids and alkalis." },
+          { "feature": "Versatile Applications", "detail": "Available in multiple sizes: lumps, grains, and powder." },
+          { "feature": "Customizable Grades", "detail": "Tailored to specific industry requirements." }
+        ],
+        "applications": [
+          { "type": "Glass Manufacturing", "use": "Raw material for high-purity glass." },
+          { "type": "Ceramics & Refractories", "use": "Provides strength and thermal stability." },
+          { "type": "Foundry & Ferro-Alloys", "use": "Used in molding and alloy production." },
+          { "type": "Construction & Engineering", "use": "Used in concrete, tiles, and building materials." },
+          { "type": "Electronics & Solar Industry", "use": "Essential in semiconductors and solar panels." },
+          { "type": "Water Filtration & Abrasives", "use": "Applied in filters and abrasive materials." }
+        ],
+        "technicalSpecifications": {
+          "SiO₂ (Silica)": "99% – 99.9%",
+          "Fe₂O₃ (Iron Oxide)": "<0.03% (low-iron grades available)",
+          "Al₂O₃ (Alumina)": "<0.5%",
+          "Whiteness": "85–98%",
+          "Mesh Sizes": "50, 100, 200, 300, 500 (customized on request)"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Quartz is valued for its purity, hardness, and optical properties, making it indispensable in glass, ceramics, electronics, construction, and renewable energy industries."
+      },
+      "bentonite": {
+        "title": "Bentonite",
+        "banner": {
+          "title": "Bentonite",
+          "heading": "Versatile Clay Mineral for Industrial & Environmental Applications",
+          "image": "/optimized/products/namakwala-bentonite-powder.webp"
+        },
+        "productImage": "/optimized/products/namakwala-bentonite-powder.webp",
+        "description": "Bentonite is a naturally occurring clay mineral composed mainly of montmorillonite. Known for its swelling, absorption, and binding properties, Bentonite is one of the most versatile industrial minerals. It is widely used in foundry, drilling, iron ore pelletizing, construction, cosmetics, agriculture, and wastewater treatment.\n\nWe supply Sodium Bentonite and Calcium Bentonite in lumps, granules, and powder form, customized to meet industry-specific requirements.",
+        "keyFeatures": [
+          { "feature": "Excellent Swelling & Absorption Capacity", "detail": "Can absorb several times its volume in water." },
+          { "feature": "Superior Binding Properties", "detail": "Provides high green and dry strength in foundry applications." },
+          { "feature": "Chemical & Thermal Stability", "detail": "Suitable for high-temperature and chemical processes." },
+          { "feature": "Natural & Eco-Friendly", "detail": "Non-toxic mineral with multiple environmental applications." },
+          { "feature": "Versatile Uses", "detail": "Available in grades for industrial, agricultural, and cosmetic purposes." }
+        ],
+        "applications": [
+          { "type": "Foundry Industry", "use": "Provides binding strength for mold and core making." },
+          { "type": "Drilling & Oilfield Industry", "use": "Used in drilling muds for lubrication and stability." },
+          { "type": "Iron Ore Pelletizing", "use": "Acts as a binder to improve pellet strength." },
+          { "type": "Construction & Civil Engineering", "use": "Used in waterproofing, sealing, and tunneling." },
+          { "type": "Cosmetics & Personal Care", "use": "Acts as absorbent in skincare and beauty products." },
+          { "type": "Agriculture & Animal Feed", "use": "Improves soil conditioning and animal nutrition." },
+          { "type": "Water & Wastewater Treatment", "use": "Removes impurities and suspended particles." }
+        ],
+        "technicalSpecifications": {
+          "Swelling Index": "25–30 ml/2g",
+          "Moisture Content": "<12%",
+          "Montmorillonite Content": "65–85%",
+          "pH Value": "8–10",
+          "Particle Size": "100, 200, 300 mesh (customizable)"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Bentonite’s unique swelling, binding, and absorption properties make it indispensable in foundry, drilling, pelletizing, construction, cosmetics, agriculture, and environmental applications."
+      },
+      "dolomite": {
+        "title": "Dolomite",
+        "banner": {
+          "title": "Dolomite",
+          "heading": "High-Purity Mineral for Industrial & Agricultural Applications",
+          "image": "/optimized/products/namaakwala-dolomite-powder.webp"
+        },
+        "productImage": "/optimized/products/namaakwala-dolomite-powder.webp",
+        "description": "Dolomite is a naturally occurring double carbonate mineral of calcium and magnesium. Known for its high purity, whiteness, and unique chemical properties, Dolomite is widely used in steel, glass, ceramics, paints, plastics, agriculture, and construction industries.\n\nWe supply premium-quality Dolomite in lumps, chips, and finely ground powder form, available in various mesh sizes to meet industry-specific requirements.",
+        "keyFeatures": [
+          { "feature": "High Purity & Whiteness", "detail": "Suitable for glass, ceramics, and paint applications." },
+          { "feature": "Excellent Source of Magnesium & Calcium", "detail": "Essential for agriculture and soil conditioning." },
+          { "feature": "High Heat Resistance", "detail": "Ideal for steel and refractory industries." },
+          { "feature": "Improves Durability & Strength", "detail": "Used in construction, concrete, and asphalt." },
+          { "feature": "Versatile Mineral", "detail": "Multiple grades for industrial and agricultural use." },
+          { "feature": "Eco-Friendly & Non-Toxic", "detail": "Safe for environmental applications." }
+        ],
+        "applications": [
+          { "type": "Steel & Metallurgy", "use": "Provides fluxing and heat resistance." },
+          { "type": "Glass & Ceramics", "use": "Improves whiteness, durability, and transparency." },
+          { "type": "Paints, Plastics & Rubber", "use": "Acts as filler, enhances smoothness and strength." },
+          { "type": "Agriculture & Soil Conditioning", "use": "Supplies calcium and magnesium to enrich soil." },
+          { "type": "Construction & Infrastructure", "use": "Improves durability in concrete, asphalt, and building materials." }
+        ],
+        "technicalSpecifications": {
+          "CaCO₃ (Calcium Carbonate)": "48–55%",
+          "MgCO₃ (Magnesium Carbonate)": "35–40%",
+          "SiO₂ (Silica)": "0.5–2%",
+          "Fe₂O₃ (Iron Oxide)": "<0.3%",
+          "Whiteness": "85–95%",
+          "Mesh Sizes": "100, 200, 300, 500, customized on request"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Dolomite’s purity, heat resistance, and versatility make it an indispensable raw material in steel, glass, ceramics, paints, agriculture, and construction industries."
+      },
+      "feldspar": {
+        "title": "Feldspar",
+        "banner": {
+          "title": "Feldspar",
+          "heading": "Essential Mineral for Ceramics, Glass & Industrial Applications",
+          "image": "/optimized/products/feldspar-banner-medium.webp"
+        },
+        "productImage": "/optimized/products/namakwala-feldspar-powder-medium.webp",
+        "description": "FELDSPAR is one of the most important industrial minerals used across multiple industries. It is a group of alumino-silicate minerals containing potassium, sodium, and calcium in varying proportions. Feldspar is highly valued for its alkali content, alumina, chemical inertness, and fluxing properties, making it an essential raw material in ceramics, glassmaking, paints, plastics, and abrasives.\n\nWe supply premium-quality Potassium Feldspar (K-Feldspar) and Sodium Feldspar (Na-Feldspar) in different grades and particle sizes to meet diverse industrial requirements.",
+        "keyFeatures": [
+          { "feature": "High Alkali Content", "detail": "Provides fluxing action in ceramics and glass." },
+          { "feature": "Improves Strength", "detail": "Enhances durability and hardness in finished products." },
+          { "feature": "Excellent Whiteness", "detail": "Contributes to brightness in tiles, sanitaryware, and glass." },
+          { "feature": "Thermal Resistance", "detail": "Stable at high temperatures, ideal for ceramics and refractories." },
+          { "feature": "Versatility", "detail": "Widely used in multiple industries." },
+          { "feature": "Eco-Friendly", "detail": "Natural and non-toxic mineral." }
+        ],
+        "types": [
+          { "name": "Potassium Feldspar (K-Feldspar)", "detail": "Rich in potassium oxide, ideal for ceramics and glass." },
+          { "name": "Sodium Feldspar (Na-Feldspar)", "detail": "Rich in sodium oxide, used in glass, tiles, and fluxes." },
+          { "name": "Ground Feldspar Powder", "detail": "Fine particle size for coatings, plastics, and paints." }
+        ],
+        "applications": [
+          { "type": "Ceramics Industry", "use": "Key raw material in tiles, sanitaryware, and pottery." },
+          { "type": "Glass Manufacturing", "use": "Improves strength, transparency, and workability." },
+          { "type": "Paints & Coatings", "use": "Provides smoothness, brightness, and durability." },
+          { "type": "Plastics & Rubber", "use": "Acts as filler, enhancing strength and resistance." },
+          { "type": "Abrasives & Refractories", "use": "Provides thermal resistance and hardness." }
+        ],
+        "technicalSpecifications": {
+          "K₂O / Na₂O Content": "8–14%",
+          "Al₂O₃ (Alumina)": "16–20%",
+          "SiO₂ (Silica)": "65–70%",
+          "Fe₂O₃ (Iron Oxide)": "<0.1% (high-grade, low-iron feldspar)",
+          "Whiteness": "75–85%"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Feldspar is a versatile mineral valued for its fluxing, strengthening, and whitening properties, making it indispensable in ceramics, glass, paints, plastics, and refractory industries."
+      },
+      "calcined-kaolin": {
+        "title": "Calcined Kaolin",
+        "banner": {
+          "title": "Calcined Kaolin",
+          "heading": "Refined Clay for Industrial Applications",
+          "image": "/optimized/products/namakwala-calcined-kaolin-powder.webp"
+        },
+        "productImage": "/optimized/products/namakwala-calcined-kaolin-powder.webp",
+        "description": "CALCINED KAOLIN, also known as aluminium silicate or metakaolin, is produced by heating high-quality natural kaolin at controlled high temperatures. This process removes bound water, improves brightness, enhances chemical stability, and increases the strength properties of the mineral.\n\nIt is widely used in industries such as paper, paints & coatings, plastics, rubber, ceramics, adhesives, and refractories due to its superior whiteness, opacity, and reinforcement characteristics.",
+        "keyFeatures": [
+          { "feature": "High Brightness & Whiteness", "detail": "Enhances color and gloss in paper, paints, and plastics." },
+          { "feature": "Excellent Opacity", "detail": "Provides superior coverage and hiding power in coatings." },
+          { "feature": "Reinforcement Properties", "detail": "Improves strength and durability in rubber and plastics." },
+          { "feature": "Chemical Stability", "detail": "Resistant to acids and alkalis, suitable for multiple industrial applications." },
+          { "feature": "Thermal Stability", "detail": "Withstands high temperatures, making it ideal for ceramics and refractories." },
+          { "feature": "Eco-Friendly", "detail": "Natural, non-toxic, and safe for use in various industries." }
+        ],
+        "applications": [
+          { "type": "Paper Industry", "use": "Improves brightness, smoothness, and printability." },
+          { "type": "Paints & Coatings", "use": "Enhances opacity and durability of paints." },
+          { "type": "Plastics & Rubber", "use": "Improves reinforcement, strength, and chemical resistance." },
+          { "type": "Ceramics & Refractories", "use": "Provides thermal stability and high strength." },
+          { "type": "Adhesives & Sealants", "use": "Improves bonding and performance." }
+        ],
+        "technicalSpecifications": {
+          "Brightness (ISO)": "90–95%",
+          "Whiteness": "88–92%",
+          "Particle Size (D50)": "1–2 microns",
+          "pH Value": "5–7",
+          "Moisture": "<1%",
+          "Oil Absorption": "35–40 g/100g"
+        },
+        "specNote": "Specifications can be customized as per industry needs",
+        "note": "Calcined kaolin offers superior brightness, opacity, and performance, ensuring high-quality results in paper, paints, plastics, ceramics, and advanced industrial applications."
+      }
+
+    }
+  },
+  "newsMedia": {
+    "title": "Latest News & Media - Namakwala",
+    "content": "Stay updated with the latest news, press releases, and media coverage of Namakwala Group.",
+    "banner": {
+      "title": "News & Media",
+      "heading": "Insights, Stories & Updates",
+      "image": "/optimized/pagebanner/namakwala-news-media-medium.webp"
+    },
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "title": "Namakwala Corporate Story"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=abcd1234",
+        "title": "Sustainability Efforts"
+      }
+    ],
+    "images": [
+      {
+        "src": "/optimized/namakwala-foundation/namakwala-rural-empowerment3-medium.webp",
+        "title": "Annual Trade Fair"
+      },
+      {
+        "src": "/optimized/namakwala-foundation/namakwala-rural-empowerment6-medium.webp",
+        "title": "CSR Activities"
+      }
+    ],
+    "metadata": {
+      "title": "Latest News & Media - Namakwala",
+      "description": "Discover the latest updates, events, and media coverage of Namakwala Group.",
+      "keywords": "Namakwala, news, media, press releases, updates",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Latest News & Media - Namakwala",
+        "description": "Stay updated with the latest events and media coverage of Namakwala Group.",
+        "url": "https://www.namakwala.in/news-media",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/pagebanner/namakwala-news-media-banner-medium.webp",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Latest News & Media - Namakwala",
+        "description": "Stay updated with Namakwala Group's latest news, stories, and media coverage.",
+        "images": [
+          "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1470&q=80"
+        ]
+      }
+    }
+  },
+  "catalogue": {
+    "title": "Our Catalogue",
+    "content": "Download our complete product catalogue or browse individual ones below.",
+    "banner": {
+      "title": "Explore Our Catalogue",
+      "heading": "Discover a wide range of salts and minerals exported worldwide.",
+      "image": "/optimized/pagebanner/namakwala-catalogue-medium.webp"
+    },
+    "items": [
+      {
+        "title": "General Catalogue",
+        "file": "/catalogue/namakwala-catalogue.pdf",
+        "image": "/optimized/products/Garnet-medium.webp"
+      }
+    ],
+    "metadata": {
+      "title": "Food Grade Salts - Namakwala",
+      "description": "Premium quality edible salts and minerals exported worldwide.",
+      "keywords": "salt, edible salt, food grade salt, Namakwala, minerals",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "url": "https://www.namakwala.in/food-grade-salts",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp",
+            "width": 800,
+            "height": 600
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "images": ["/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp"]
+      }
+    }
+  },
+   "brochures": {
+    "title": "Our Brochures",
+    "content": "Download our complete product Brochures or browse individual ones below.",
+    "banner": {
+      "title": "Explore Our Brochures",
+      "heading": "Discover a wide range of salts and minerals exported worldwide.",
+      "image": "/optimized/pagebanner/namakwala-catalogue-medium.webp"
+    },
+    "items": [
+      {
+        "title": "General Catalogue",
+        "file": "/catalogue/catalogue.pdf",
+        "image": "/optimized/products/Garnet-medium.webp"
+      }
+    ],
+    "metadata": {
+      "title": "Food Grade Salts - Namakwala",
+      "description": "Premium quality edible salts and minerals exported worldwide.",
+      "keywords": "salt, edible salt, food grade salt, Namakwala, minerals",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "url": "https://www.namakwala.in/food-grade-salts",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp",
+            "width": 800,
+            "height": 600
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "images": ["/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Trusted Exporter of Premium Salts",
+    "content": "Get in touch with us...",
+    "banner": {
+      "title": "Contact Namakwala",
+      "heading": "Experience the purity and excellence of Namakwala.",
+      "image": "/optimized/pagebanner/namakwala-contactus-1-medium.webp"
+    },
+    "addresses": [
+      {
+        "title": "REGISTERED OFFICE",
+        "lines": [
+          "Namakwala",
+          "Opp. Hotel Haveli,",
+          "BHILWARA – 311001 INDIA"
+        ]
+      },
+      {
+        "title": "CORPORATE OFFICE",
+        "lines": [
+          "Office #202/214,",
+          "AL Hilal Bank Building, Al Qusais,",
+          "DUBAI - U.A.E"
+        ]
+      },
+      {
+        "title": "PLANT",
+        "lines": [
+          "Salt City,",
+          "Chopadva",
+          "KUTCH – 370 140 INDIA"
+        ]
+      }
+    ],
+    "metadata": {
+      "title": "Food Grade Salts - Namakwala",
+      "description": "Premium quality edible salts and minerals exported worldwide.",
+      "keywords": "salt, edible salt, food grade salt, Namakwala, minerals",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "url": "https://www.namakwala.in/food-grade-salts",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp",
+            "width": 800,
+            "height": 600
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Food Grade Salts - Namakwala",
+        "description": "Premium quality edible salts and minerals exported worldwide.",
+        "images": ["/optimized/heroBanner/2.3-Food-Grade-Salt-medium.webp"]
+      }
+    }
+  },
+  "privacy-policy": {
+    "title": "Privacy Policy",
+    "content": "At Namakwala Group, we respect your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and protect information provided by visitors to our website and applications.",
+    "banner": {
+      "title": "Data Privacy at Namakwala",
+      "heading": "Trust, Security, Transparency",
+      "image": "/optimized/pagebanner/namakwala-privacy-policy-medium.webp"
+    },
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "content": "Namakwala Group is committed to protecting the privacy of our website and application visitors. We implement reasonable precautions to safeguard personal information and comply with all applicable legal and regulatory requirements.",
+        "image": "/optimized/pagebanner/namakwala-intro-privacy-medium.webp"
+      },
+      "information-collected": {
+        "title": "Information Collected",
+        "content": [
+          "Personal Information such as name, contact details, email address, gender, and date of birth.",
+          "Sensitive Personal Data or Information (SPDI) including passwords, financial information, health data, biometric information, and any other details provided for services.",
+          "Non-personal information automatically collected such as usage patterns, device information, and cookies."
+        ],
+        "image": "/optimized/pagebanner/namakwala-information-collected-medium.webp"
+      },
+      "purpose": {
+        "title": "Purpose of Collection",
+        "content": [
+          "To provide and improve our products and services.",
+          "To process orders or applications submitted by visitors.",
+          "To communicate updates, offers, and other relevant information.",
+          "To respond to feedback, inquiries, and complaints.",
+          "To ensure security and proper functioning of our website and applications."
+        ],
+        "image": "/optimized/pagebanner/namakwala-purpose-collection-medium.webp"
+      },
+      "retention": {
+        "title": "Retention and Security",
+        "content": [
+          "Information is retained only as long as necessary to meet legal or business purposes.",
+          "We follow industry-standard security practices including managerial, technical, operational, and physical controls to protect information.",
+          "Our security practices are reviewed periodically to keep pace with business, technology, and regulatory changes."
+        ],
+        "image": "/optimized/pagebanner/namakwala-retention-security-medium.webp"
+      },
+      "disclosure": {
+        "title": "Disclosure of Information",
+        "content": [
+          "We do not share information for purposes other than described without your consent, except where required by law.",
+          "Information may be shared with business partners under contractual obligations with adequate security measures.",
+          "Legal disclosure may occur if mandated by government authorities."
+        ],
+        "image": "/optimized/pagebanner/namakwala-disclosure-information-medium.webp"
+      },
+      "feedback": {
+        "title": "Feedback and Contact",
+        "content": [
+          "For any feedback, concerns, or questions about this policy, you can contact us at info@namakwala.com"
+        ],
+        "image": "/optimized/pagebanner/namakwala-feedback-contact-medium.webp"
+      }
+    },
+    "metadata": {
+      "title": "Privacy Policy - Namakwala",
+      "description": "Learn about Namakwala Group's commitment to protecting your personal information and privacy.",
+      "keywords": "Namakwala, privacy policy, data protection, personal information",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Privacy Policy - Namakwala",
+        "description": "Learn about Namakwala Group's commitment to protecting your personal information and privacy.",
+        "url": "https://www.namakwala.in/privacy-policy",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/pagebanner/namakwala-privacy-policy-medium.webp",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Privacy Policy - Namakwala",
+        "description": "Learn about Namakwala Group's commitment to protecting your personal information and privacy.",
+        "images": [
+          "https://images.unsplash.com/photo-1596496059963-79e88e2f8f9c?auto=format&fit=crop&w=1470&q=80"
+        ]
+      }
+    }
+  },
+  "legal-notice": {
+    "title": "Legal Notice - Namakwala",
+    "slug": "legal-notice",
+    "description": "Read Namakwala Group’s legal terms, disclaimers, and corporate information to understand the rules governing the use of our website and services.",
+    "banner": {
+      "title": "Legal Notice",
+      "heading": "Transparency & Compliance",
+      "image": "/optimized/pagebanner/namakwala-legal-notice-banner-medium.webp"
+    },
+    "sections": [
+      {
+        "heading": "Company Information",
+        "text": "Namakwala Group is registered under applicable Indian company laws. All information on this site is owned, managed, and maintained by Namakwala Group.",
+        "image": "/optimized/pagebanner/namakwala-information-collected-medium.webp"
+      },
+      {
+        "heading": "Intellectual Property",
+        "text": "All logos, trademarks, images, and content on this website are the intellectual property of Namakwala Group, unless otherwise stated. Unauthorized use is strictly prohibited.",
+        "image": "/optimized/pagebanner/namakwala-governing-law-medium.webp"
+      },
+      {
+        "heading": "Disclaimer",
+        "text": "The content on this site is provided for informational purposes only. Namakwala Group makes no warranties regarding the completeness, accuracy, or reliability of this content.",
+        "image": "/optimized/pagebanner/namakwala-disclaimer-medium.webp"
+      },
+      {
+        "heading": "Governing Law",
+        "text": "This legal notice shall be governed by and construed in accordance with the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in India.",
+        "image": "/optimized/pagebanner/namakwala-governing-law-medium.webp"
+      },
+      {
+        "heading": "Contact Information",
+        "text": "For any inquiries regarding this legal notice, please contact us at legal@namakwala.com.",
+        "image": "/optimized/pagebanner/namakwala-contact-medium.webp"
+      }
+    ],
+    "metadata": {
+      "title": "Legal Notice - Namakwala",
+      "description": "Read the official legal notice, disclaimers, and terms of Namakwala Group.",
+      "keywords": "Namakwala, legal notice, disclaimer, company information, intellectual property",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Legal Notice - Namakwala",
+        "description": "Learn about the legal disclaimers, terms, and company information of Namakwala Group.",
+        "url": "https://www.namakwala.in/legal-notice",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/pagebanner/namakwala-legal-notice-banner-medium.webp",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Legal Notice - Namakwala",
+        "description": "Read Namakwala Group’s official legal terms, disclaimers, and policies.",
+        "images": [
+          "https://images.unsplash.com/photo-1581093458791-9cbf8f2dfb76?auto=format&fit=crop&w=1470&q=80"
+        ]
+      }
+    }
+  },
+  "fraud-alert": {
+    "title": "Fraud Alert - Namakwala",
+    "description": "Stay safe from fraudulent activities pretending to be Namakwala. Verify official communication and learn how to protect yourself.",
+    "banner": {
+      "title": "Fraud Alert",
+      "heading": "Stay Alert, Stay Safe",
+      "image": "/optimized/pagebanner/namakwala-fraud-alert-medium.webp"
+    },
+    "sections": [
+      {
+        "heading": "Why This Matters",
+        "text": "Fraudulent individuals may attempt to misuse Namakwala's name to deceive people. We urge you to remain cautious.",
+        "image": "/assets/pagebanner/namakwala-fraud-alert-why.jpg"
+      },
+      {
+        "heading": "Common Types of Frauds",
+        "text": [
+          "Fake job offers using Namakwala’s name",
+          "Fraudulent emails requesting payments",
+          "Impersonation of our employees on social media",
+          "Fake websites or WhatsApp groups claiming affiliation"
+        ],
+        "image": "/assets/pagebanner/namakwala-common-froud.jpg"
+      },
+      {
+        "heading": "How to Verify Authentic Communication",
+        "text": [
+          "Official emails come only from *@namakwala.com",
+          "We never request payment for recruitment or job opportunities",
+          "Cross-check website links with our official domain: namakwala.com",
+          "Contact us directly through our official channels if in doubt"
+        ],
+        "image": "/assets/pagebanner/namakwala-verify-authentic.jpg"
+      },
+      {
+        "heading": "What To Do If You Suspect Fraud",
+        "text": [
+          "Do not share personal or financial details",
+          "Report suspicious activity immediately",
+          "Contact us via legal@namakwala.com",
+          "Inform local authorities if you’ve been targeted"
+        ],
+        "image": "/assets/pagebanner/namakwala-suspect-fraud.jpg"
+      }
+    ],
+    "metadata": {
+      "title": "Fraud Alert - Namakwala",
+      "description": "Beware of fraudulent activities. Learn how to identify, verify, and report fraud involving Namakwala.",
+      "keywords": "Namakwala, fraud alert, scams, fraud prevention, fake job offers, phishing",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Fraud Alert - Namakwala",
+        "description": "Stay alert against frauds misusing Namakwala’s name. Verify official sources and protect yourself.",
+        "url": "https://www.namakwala.in/fraud-alert",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/optimized/pagebanner/namakwala-fraud-alert-medium.webp",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Fraud Alert - Namakwala",
+        "description": "Learn how to stay safe from fraudulent activities claiming to represent Namakwala.",
+        "images": [
+          "https://images.unsplash.com/photo-1584438784894-089d6a62b8d4?auto=format&fit=crop&w=1470&q=80"
+        ]
+      }
+    }
+  },
+  "terms-of-service": {
+    "title": "Terms of Service",
+    "description": "Read Namakwala Group's Terms of Service outlining the rules and regulations for using our website and services.",
+    "banner": {
+      "title": "Namakwala Terms of Service",
+      "heading": "Trust, Transparency, Responsibility",
+      "image": "/optimized/pagebanner/namakwala-terms-service-medium.webp"
+    },
+    "sections": [
+      {
+        "heading": "Introduction",
+        "text": "These Terms of Service govern your use of Namakwala Group's website and services. By accessing our site, you agree to these terms.",
+        "image": "/optimized/pagebanner/namakwala-intro-privacy-medium.webp"
+      },
+      {
+        "heading": "Use of Website",
+        "text": [
+          "You must use the website in compliance with applicable laws and regulations.",
+          "Unauthorized access or misuse of the website is prohibited.",
+          "You agree not to upload harmful or illegal content."
+        ],
+        "image": "/optimized/pagebanner/namakwala-user-responsibilities-medium.webp"
+      },
+      {
+        "heading": "Intellectual Property",
+        "text": "All content, logos, and trademarks on this site are the property of Namakwala Group and protected by copyright laws.",
+        "image": "/optimized/pagebanner/namakwala-intellectual-property-medium.webp"
+      },
+      {
+        "heading": "Limitation of Liability",
+        "text": "Namakwala Group is not liable for any damages resulting from the use or inability to use our services.",
+        "image": "/optimized/pagebanner/namakwala-limitation-liability-medium.webp"
+      },
+      {
+        "heading": "Governing Law",
+        "text": "These terms are governed by the laws of India. Any disputes will be resolved in accordance with Indian law.",
+        "image": "/optimized/pagebanner/namakwala-governing-law-medium.webp"
+      }
+    ],
+    "metadata": {
+      "title": "Terms of Service - Namakwala",
+      "description": "Read Namakwala Group's Terms of Service outlining the rules and regulations for using our website and services.",
+      "keywords": "Namakwala, terms of service, rules, website usage, policies",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Terms of Service - Namakwala",
+        "description": "Read Namakwala Group's Terms of Service outlining the rules and regulations for using our website and services.",
+        "url": "https://www.namakwala.in/terms-of-service",
+        "siteName": "Namakwala Group",
+        "images": [
+          { "url": "/optimized/pagebanner/namakwala-terms-service-medium.webp", "width": 1200, "height": 630 }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Terms of Service - Namakwala",
+        "description": "Read Namakwala Group's Terms of Service outlining the rules and regulations for using our website and services.",
+        "images": ["https://images.unsplash.com/photo-1596496059963-79e88e2f8f9c?auto=format&fit=crop&w=1470&q=80"]
+      }
+    }
+  },
+  "export-terms": {
+    "title": "Export Terms & Conditions",
+    "description": "Review our export terms and compliance guidelines. Learn how Namakwala ensures transparency, quality, and adherence to international trade standards.",
+    "banner": {
+      "title": "Export Terms",
+      "heading": "Commitment to Transparency",
+      "image": "/assets/pagebanner/namakwala-export-terms.jpg"
+    },
+    "sections": [
+      {
+        "heading": "International Compliance",
+        "text": "We adhere to all applicable international trade laws, ensuring that our export processes meet the highest standards of legality and ethics.",
+        "image": "/optimized/pagebanner/namakwala-compliance-medium.webp"
+      },
+      {
+        "heading": "Product Documentation",
+        "text": [
+          "Certificates of Origin provided with every shipment",
+          "Health and Safety certificates available upon request",
+          "Detailed product specifications included for all exports"
+        ],
+        "image": "/assets/pagebanner/namakwala-product-documentation.jpg"
+      },
+      {
+        "heading": "Payment Terms",
+        "text": [
+          "Standard terms: Advance payment or confirmed Letter of Credit (LC)",
+          "Custom terms available for long-term partners",
+          "Invoices issued in USD unless otherwise agreed"
+        ],
+        "image": "/assets/pagebanner/namakwala-payment-terms.jpg"
+      },
+      {
+        "heading": "Logistics & Shipping",
+        "text": "We coordinate with leading logistics partners to ensure timely and safe delivery. Options include FOB, CIF, and custom arrangements based on client needs.",
+        "image": "/assets/pagebanner/namakwala-logistics-shipping.jpg"
+      },
+      {
+        "heading": "Dispute Resolution",
+        "text": "All disputes arising from export transactions are subject to the jurisdiction of the courts at our registered office location, unless otherwise mutually agreed.",
+        "image": "/assets/pagebanner/namakwala-dispute-resolution.jpg"
+      }
+    ],
+    "metadata": {
+      "title": "Export Terms & Conditions - Namakwala",
+      "description": "Explore Namakwala’s export terms including compliance, payment policies, documentation, and logistics support.",
+      "keywords": "Namakwala, export terms, export compliance, trade policy, payment terms, logistics",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Export Terms & Conditions - Namakwala",
+        "description": "Namakwala ensures transparent export terms with compliance, proper documentation, and secure logistics.",
+        "url": "https://www.namakwala.in/export-terms",
+        "siteName": "Namakwala Group",
+        "images": [
+          {
+            "url": "/assets/pagebanner/namakwala-export-terms.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Export Terms & Conditions - Namakwala",
+        "description": "Review Namakwala export compliance, documentation, and payment policies.",
+        "images": [
+          "https://images.unsplash.com/photo-1593113598332-cd6c1e7b3c16?auto=format&fit=crop&w=1470&q=80"
+        ]
+      }
+    }
+  },
+  "business-section": {
+    "salt": {
+      "title": "Salt",
+      "slug": "salt",
+      "description": "Salt is one of the most essential minerals in daily life, used not only to enhance the taste of food but also to support overall health and well-being.\n\nIn every kitchen, edible salt plays a vital role in seasoning, preserving food, and bringing out natural flavors. From household cooking and baking to traditional pickling and modern packaged foods, salt ensures freshness and taste consistency.\n\nBeyond culinary uses, salt is also important in maintaining electrolyte balance in the human body, supporting hydration, and aiding proper muscle and nerve function. Daily consumption of iodized salt helps prevent iodine deficiency, promoting healthy growth and mental development.\n\nIn households, salt is commonly used for cleaning, oral care (like gargling with salt water), and even skincare remedies. Across industries, industrial salt supports agriculture, water treatment, and chemical production, making it indispensable in modern life.\n\nSalt in daily life is more than just a seasoning — it is a natural, versatile, and valuable mineral that connects taste, tradition, health, and industry in one simple crystal.",
+
+      "banner": {
+        "title": "Salt",
+        "heading": "Sustainable energy solutions with cutting-edge technology",
+        "image": "/optimized/products/namakwala-Crystal-Raw-Salt1.webp"
+      },
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "Our Salt business provides high-quality products and solutions for industrial and consumer needs.",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+          "heading": "Applications",
+          "text": "Salt products are used in food processing, chemical industries, and other applications to meet global standards.",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+        }
+      ],
+      "metadata": {
+        "title": "Salt - Namakwala Group",
+        "description": "Overview of Salt business and solutions offered by Namakwala Group.",
+        "keywords": "salt, Namakwala Group, industrial salt, consumer products",
+        "authors": [{"name": "Namakwala Group"}],
+        "openGraph": {
+          "title": "Salt - Namakwala Group",
+          "description": "High-quality salt products and solutions by Namakwala Group.",
+          "url": "https://www.namakwala.in/salt",
+          "siteName": "Namakwala Group",
+          "images": [{"url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80", "width": 800, "height": 600}],
+          "locale": "en_US",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Salt - Namakwala Group",
+          "description": "High-quality salt products and solutions by Namakwala Group.",
+          "images": ["https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"]
+        }
+      }
+    },
+    "minerals": {
+      "title": "Minerals",
+      "slug": "minerals",
+      "description": "Minerals are the foundation of modern industry and daily life, serving as essential resources across multiple sectors.\n\nThey are vital in producing steel, cement, glass, ceramics, and fertilizers, supporting agriculture, housing, and infrastructure development on a global scale.\n\nIn healthcare and nutrition, essential minerals such as calcium, iron, zinc, and magnesium strengthen bones, improve immunity, and maintain overall well-being.\n\nIndustrial minerals like silica, gypsum, and limestone play a key role in energy generation, water treatment, and environmental sustainability, making them indispensable for growth.\n\nMinerals bridge the gap between natural resources and modern innovation, empowering industries, improving lives, and driving economic development toward a sustainable future.",
+      "banner": {
+        "title": "Minerals",
+        "heading": "Innovative minerals and advanced materials solutions",
+        "image": "/optimized/products/namakwala-garnet-abrasive-medium.webp"
+      },
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "Providing a wide range of minerals and advanced materials for industrial applications.",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+        },
+        {
+          "heading": "Applications",
+          "text": "Materials are used in polymers, polyesters, elastomers, and other high-performance applications.",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"
+        }
+      ],
+      "metadata": {
+        "title": "Minerals - Namakwala Group",
+        "description": "Overview of Minerals business and advanced materials offered by Namakwala Group.",
+        "keywords": "minerals, polymers, advanced materials, Namakwala Group",
+        "authors": [{"name": "Namakwala Group"}],
+        "openGraph": {
+          "title": "Minerals - Namakwala Group",
+          "description": "Innovative minerals and advanced materials by Namakwala Group.",
+          "url": "https://www.namakwala.in/minerals",
+          "siteName": "Namakwala Group",
+          "images": [{"url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80", "width": 800, "height": 600}],
+          "locale": "en_US",
+          "type": "website"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Minerals - Namakwala Group",
+          "description": "Innovative minerals and advanced materials by Namakwala Group.",
+          "images": ["https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80"]
+        }
+      }
+    }
+  },
+  "life-at-namakwala": {
+    "title": "Life at Namakwala",
+    "content": "Namakwala Group, life at work is dynamic, inclusive, and rewarding. We cultivate a positive work culture where innovation, collaboration, and employee well-being are at the core. Our team enjoys career growth opportunities, skill development programs, and exposure to global trade, salt and minerals industries. Every day at Namakwala is a chance to learn, contribute, and grow with a forward-thinking organization.",
+    "banner": {
+      "title": "Life at Namakwala",
+      "heading": "Why work at Namakwala?",
+      "image": "/images/life/banner-medium.webp"
+    },
+    "images": [
+      { "src": "/optimized/life-at-namakwala/namakwala-life-at-namakwala-medium.webp", "alt": "Employee at work" },
+      { "src": "/optimized/life-at-namakwala/namakwala-life-at-namakwala1-medium.webp", "alt": "Employee at work" },
+      { "src": "/optimized/life-at-namakwala/namakwala-life-at-namakwala3-medium.webp", "alt": "Employee at work" },
+      { "src": "/optimized/life-at-namakwala/namakwala-life-at-namakwala4-medium.webp", "alt": "Employee at work" }
+    ],
+    "metadata": {
+      "title": "Life at Namakwala",
+      "description": "Why work at Namakwala Group?",
+      "keywords": "careers, life at Namakwala, work culture",
+      "authors": [{ "name": "Namakwala Group" }],
+      "openGraph": {
+        "title": "Life at Namakwala",
+        "description": "Why work at Namakwala Group?",
+        "url": "https://www.namakwala.in/life-at-namakwala",
+        "siteName": "Namakwala Group",
+        "images": [{ "url": "/images/life/banner-medium.webp" }],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Life at Namakwala",
+        "description": "Why work at Namakwala Group?",
+        "images": ["/images/life/banner-medium.webp"]
+      }
+    }
+  },
+  "namakwala-foundation": {
+    "title": "namakwala Foundation",
+    "slug": "namakwala-foundation",
+    "description": "Founded in 1945, the Foundation was created to carry forward Namakwala’s legacy of trust and responsibility. It works to address vital community needs through initiatives in health, education, sustainability, and rural empowerment.",
+    "banner": {
+      "title": "namakwala Foundation",
+      "heading": "Empowering India with Meaningful Interventions",
+      "image": "/images/foundation/banner-medium.webp"
+    },
+    "sections": [
+      {
+        "heading": "Overview",
+        "logo": "/optimized/brands/namakwala-foundation-medium.webp",
+        "text": "Founded in 1945, the Foundation continues to improve lives through health, education, sustainability, and rural empowerment programs across India.",
+        "slider": [
+          "/optimized/namakwala-rural-empowerment3.webp"
+        ]
+      }
+    ],
+    "metadata": {
+      "title": "namakwala Foundation - Empowering India",
+      "description": "Namakwala Foundation, founded in 1945, addresses India's developmental challenges and continues to impact millions of lives.",
+      "keywords": "namakwala Foundation, CSR, Corporate Social Responsibility, Development, India",
+      "authors": [{ "name": "namakwala Foundation" }],
+      "openGraph": {
+        "title": "namakwala Foundation - Empowering India",
+        "description": "Namakwala Foundation, founded in 1945, addresses India's developmental challenges and continues to impact millions of lives.",
+        "url": "https://www.namakwalafoundation.org",
+        "siteName": "namakwala Foundation",
+        "images": [
+          {
+            "url": "/images/foundation/banner-medium.webp",
+            "width": 800,
+            "height": 600
+          }
+        ],
+        "locale": "en_US",
+        "type": "website"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "namakwala Foundation - Empowering India",
+        "description": "Founded in 1945, Namakwala Foundation has touched millions of lives through meaningful developmental interventions.",
+        "images": ["/images/foundation/banner-medium.webp"]
+      }
+    }
+  },
+  "brand-section": {
+    "title": "Global Reach",
+    "subtitle": "Celebrating India’s heritage and innovation, our brands deliver authentic quality, global recognition, and trusted excellence across diverse industries.",
+    "achievements": [
+      { "label": "Years of Excellence", "value": "80+" },
+      { "label": "Trusted Brands", "value": "110+" },
+      { "label": "Quality Certifications", "value": "10+" },
+      { "label": "Countries", "value": "21+" }
+    ],
+    "certifications": [
+        {
+          "image": "/optimized/certifications/namakwala-iso-9001-medium.webp",
+          "name": "ISO 9001:2015",
+          "description": "Quality & Compliance Standards"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-iso-22000-medium.webp",
+          "name": "ISO 22000",
+          "description": "Food Safety Assurance"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-haccp-medium.webp",
+          "name": "Haccp",
+          "description": "Preventive Safety Control"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-halal-medium.webp",
+          "name": "Halal",
+          "description": "Lawful & Permissible Standards"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-FSSAI-medium.webp",
+          "name": "FSSAI",
+          "description": "Food Safety Standards"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-export-excellence-medium.webp",
+          "name": "Export Excellence",
+          "description": "Recognized for Global Trade Performance"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-apeda-medium.webp",
+          "name": "APEDA",
+          "description": "Agricultural & Processed Food Export Development Authority"
+        },
+        {
+          "image": "/optimized/certifications/namakwala-fieo-medium.webp",
+          "name": "FIEO",
+          "description": "Federation of Indian Export Organisations"
+        }
+      ]
+
+  },
+  "brandPromise": {
+    "title": "Our Brand Promise",
+    "description": "Each brand we showcase reflects India’s timeless heritage and commitment to excellence. Blending traditional artistry with modern innovation, we deliver authentic products that uphold the highest global standards.",
+    "partners": [
+      {
+        "name": "Ocean",
+        "image": "/optimized/brands/brand-ocean-medium.webp",
+        "description": "Globally recognized for reliability, this premium serves culinary, industrial, and wellness needs with excellence."
+      },
+      {
+        "name": "Atulya",
+        "image": "/optimized/brands/brands-atulya-medium.webp",
+        "description": "Premium enriched with natural minerals, designed to enhance flavor, promote wellness, and elevate every meal."
+      },
+      {
+        "name": "NatureSa",
+        "image": "/optimized/brands/brands-naturesa-medium.webp",
+        "description": "100% authentic, mineral-dense salt, sustainably sourced to support daily health and balanced nutrition."
+      },
+      {
+        "name": "Unistar",
+        "image": "/optimized/brands/brand-unistar-medium.webp",
+        "description": "High-grade offering dependable performance, delivering unmatched value to households and commercial applications."
+      },
+      {
+        "name": "Maa",
+        "image": "/optimized/brands/brand-maa.webp",
+        "description": "Superior quality, refined with care to ensure freshness, safety, and a trusted taste for every kitchen."
+      },
+      {
+        "name": "Indus",
+        "image": "/assets/brands/brand-Indus.png",
+        "description": "Naturally refined, mineral-packed, and carefully processed to elevate flavor, nutrition, and quality for diverse application"
+      }
+      
+    ]
+  }
+}

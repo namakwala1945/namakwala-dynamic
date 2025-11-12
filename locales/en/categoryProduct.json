@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Salt",
+    "image": "/optimized/products/Salt-large.webp",
+    "products": "25+ Products",
+    "description": "Premium Indian salt, naturally rich in minerals, delivering pure taste and gourmet quality"
+  },
+  {
+    "id": 2,
+    "name": "Minerals",
+    "image": "/optimized/products/Garnet-large.webp",
+    "products": "1000+ Products",
+    "description": "Premium Vinerals"
+  }
+]

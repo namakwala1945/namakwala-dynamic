@@ -1,0 +1,97 @@
+{
+  "page": {
+    "title": "Our Blog",
+    "description": "Stay updated with the latest news, articles, and insights from our team.",
+    "banner": "/assets/images/blog-banner.jpg",
+    "metadata": {
+      "title": "Blog | Namakwala Group",
+      "description": "Explore articles, industry updates, and insights from Namakwala Group.",
+      "keywords": ["salt", "industry news", "export", "minerals"],
+      "authors": [{ "name": "Namakwala Team" }],
+      "openGraph": {
+        "title": "Blog | Namakwala Group",
+        "description": "Explore articles, industry updates, and insights from Namakwala Group.",
+        "type": "website",
+        "url": "https://www.namakwala.in/blog",
+        "siteName": "Namakwala Group",
+        "images": [{ "url": "/assets/images/og-blog.jpg" }]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Blog | Namakwala Group",
+        "description": "Explore articles, industry updates, and insights from Namakwala Group.",
+        "images": ["/assets/images/og-blog.jpg"]
+      }
+    }
+  },
+  "posts": [
+    {
+      "slug": "sustainable-salt-production",
+      "title": "Sustainable Salt Production: The Future of the Industry",
+      "excerpt": "Learn how sustainable practices are shaping the future of salt production worldwide.",
+      "banner": "/assets/images/blog/sustainable-salt.jpg",
+      "author": "Ravi Kumar",
+      "date": "2025-09-01",
+      "category": "Sustainability",
+      "content": [
+        "Salt production has long been a cornerstone of many economies, but environmental concerns are reshaping the industry.",
+        "Modern companies are adopting eco-friendly harvesting techniques to ensure long-term sustainability.",
+        "This article explores innovations and challenges facing salt producers worldwide."
+      ],
+      "metadata": {
+        "title": "Sustainable Salt Production | Namakwala Group",
+        "description": "Explore how eco-friendly practices are transforming the salt industry.",
+        "keywords": ["sustainable salt", "eco-friendly production", "green industry"],
+        "authors": [{ "name": "Ravi Kumar" }],
+        "openGraph": {
+          "title": "Sustainable Salt Production | Namakwala Group",
+          "description": "Explore how eco-friendly practices are transforming the salt industry.",
+          "type": "article",
+          "url": "https://www.namakwala.in/blog/sustainable-salt-production",
+          "siteName": "Namakwala Group",
+          "images": [{ "url": "/assets/images/blog/sustainable-salt-og.jpg" }]
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Sustainable Salt Production",
+          "description": "Eco-friendly practices are reshaping the salt industry.",
+          "images": ["/assets/images/blog/sustainable-salt-og.jpg"]
+        }
+      }
+    },
+    {
+      "slug": "export-growth-trends",
+      "title": "Global Salt Export Trends in 2025",
+      "excerpt": "An analysis of the latest global export data and growth opportunities.",
+      "banner": "/assets/images/blog/export-trends.jpg",
+      "author": "Priya Sharma",
+      "date": "2025-08-20",
+      "category": "Exports",
+      "content": [
+        "The salt export industry has seen steady growth, driven by demand in emerging markets.",
+        "Data from 2025 suggests strong opportunities in Asia and Africa.",
+        "Companies must adapt to shifting trade regulations to remain competitive."
+      ],
+      "metadata": {
+        "title": "Global Salt Export Trends in 2025 | Namakwala Group",
+        "description": "Latest insights into global salt export growth and opportunities.",
+        "keywords": ["salt exports", "global trade", "2025 trends"],
+        "authors": [{ "name": "Priya Sharma" }],
+        "openGraph": {
+          "title": "Global Salt Export Trends in 2025",
+          "description": "Latest insights into global salt export growth and opportunities.",
+          "type": "article",
+          "url": "https://www.namakwala.in/blog/export-growth-trends",
+          "siteName": "Namakwala Group",
+          "images": [{ "url": "/assets/images/blog/export-trends-og.jpg" }]
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "title": "Global Salt Export Trends in 2025",
+          "description": "Latest insights into global salt export growth and opportunities.",
+          "images": ["/assets/images/blog/export-trends-og.jpg"]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Triple Refined Free Flow Salt",
+    "slug": "triple-refined-free-flow-salt",
+    "category": "Salt",
+    "mainCategory": "Salt",
+    "price": "$299",
+    "rating": 4.9,
+    "reviews": 156,
+    "image": "/optimized/products/Garnet-large.webp",
+    "badge": "Best Seller",
+    "description": "High purity free flow salt ideal for daily cooking needs.",
+    "colorCode": "hsl(45, 44%, 59%)",
+    "specifications": {
+      "Colour": "Medium Dark Brown",
+      "Variety": "Pooja",
+      "Foreign Matter": "1%",
+      "Purity": "100%",
+      "Moisture": "11% max",
+      "Damage": "1% - 2% max"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Iodized Table Salt",
+    "slug": "iodized-table-salt",
+    "category": "Salt",
+    "mainCategory": "Salt",
+    "price": "$99",
+    "rating": 4.7,
+    "reviews": 102,
+    "image": "/optimized/products/Garnet-large.webp",
+    "badge": "Popular",
+    "description": "Enriched with iodine to support healthy living.",
+    "colorCode": "hsl(200, 70%, 60%)",
+    "specifications": {
+      "Colour": "Medium Dark Brown",
+      "Variety": "Pooja",
+      "Foreign Matter": "1%",
+      "Purity": "100%",
+      "Moisture": "11% max",
+      "Damage": "1% - 2% max"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Cooking Salt",
+    "slug": "cooking-salt",
+    "category": "Minerals",
+    "mainCategory": "Salt",
+    "price": "$120",
+    "rating": 4.6,
+    "reviews": 89,
+    "image": "/optimized/products/Garnet-large.webp",
+    "badge": "Standard",
+    "description": "Everyday cooking salt with balanced taste.",
+    "colorCode": "hsl(340, 65%, 55%)",
+    "specifications": {
+      "Colour": "Medium Dark Brown",
+      "Variety": "Pooja",
+      "Foreign Matter": "1%",
+      "Purity": "100%",
+      "Moisture": "11% max",
+      "Damage": "1% - 2% max"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Low Sodium Salt",
+    "slug": "low-sodium-salt",
+    "category": "Minerals",
+    "mainCategory": "Salt",
+    "price": "$149",
+    "rating": 4.8,
+    "reviews": 74,
+    "image": "/optimized/products/Garnet-large.webp",
+    "badge": "Healthy Choice",
+    "description": "Perfect for low-sodium diets and heart health.",
+    "colorCode": "hsl(120, 60%, 50%)",
+    "specifications": {
+      "Colour": "Medium Dark Brown",
+      "Variety": "Pooja",
+      "Foreign Matter": "1%",
+      "Purity": "100%",
+      "Moisture": "11% max",
+      "Damage": "1% - 2% max"
+    }
+  }
+]
