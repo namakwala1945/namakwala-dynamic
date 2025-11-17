@@ -42,9 +42,7 @@ interface TermsOfServiceData {
 // Fetch Function
 // ----------------------
 async function getTermsData(): Promise<TermsOfServiceData> {
-  const res = await fetch(API_URL, {
-    cache: "no-store", // 🧠 always fetch fresh data from Strapi
-  });
+  const res = await fetch(API_URL, { cache: "no-store" });
 
   if (!res.ok) throw new Error("Failed to fetch Terms of Service data");
 
@@ -53,7 +51,7 @@ async function getTermsData(): Promise<TermsOfServiceData> {
 }
 
 // ----------------------
-// Generate Metadata
+// Metadata
 // ----------------------
 export async function generateMetadata() {
   const data = await getTermsData();
@@ -61,13 +59,9 @@ export async function generateMetadata() {
 
   return {
     title: meta?.title,
-    description:
-      meta?.description?.[0]?.children?.[0]?.text ??
-      "Namakwala Terms of Service",
+    description: meta?.description?.[0]?.children?.[0]?.text ?? "Namakwala Terms of Service",
     keywords: meta?.keywords,
-    alternates: {
-      canonical: meta?.openGraph?.url,
-    },
+    alternates: { canonical: meta?.openGraph?.url },
     openGraph: {
       title: meta?.openGraph?.title,
       description: meta?.openGraph?.description?.[0]?.children?.[0]?.text,
@@ -87,7 +81,6 @@ export async function generateMetadata() {
 // ----------------------
 export default async function TermsOfServicePage() {
   const data = await getTermsData();
-
   const banner = data.pagebanner;
   const sections = data.CommonSection;
   const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
@@ -111,12 +104,7 @@ export default async function TermsOfServicePage() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.namakwala.in/",
-            },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.namakwala.in/" },
             {
               "@type": "ListItem",
               position: 2,

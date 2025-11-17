@@ -2,54 +2,69 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getStrapiMedia } from "@/lib/media";
 
 interface FoundationItem {
   description: string;
-  logo?: string;
+  logo?: string | null;
   slider?: string[];
 }
 
 export default function FoundationSection() {
   const [foundation, setFoundation] = useState<FoundationItem | null>(null);
   const [current, setCurrent] = useState(0);
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || `${process.env.NEXT_PUBLIC_STRAPI_URL}`;
 
-  // Fetch foundation data from API
+  const STRAPI_URL =
+    process.env.NEXT_PUBLIC_STRAPI_URL ||
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}`;
+
+  // Fetch foundation data with optimized request
   useEffect(() => {
-    fetch(`${STRAPI_URL}/api/namakwala-foundations?populate=*`)
-      .then((res) => res.json())
-      .then((data) => {
+    const fetchFoundation = async () => {
+      try {
+        const res = await fetch(
+          `${STRAPI_URL}/api/namakwala-foundations?populate=*`,
+          {
+            cache: "no-store", // 🚀 forces fresh, fast response (no stale cache)
+          }
+        );
+
+        const data = await res.json();
+
         if (data?.data?.length > 0) {
           const item = data.data[0];
 
-          // Convert description array to plain text
+          // Convert description rich-text to plain text
           const descriptionText = (item.description || [])
             .map((block: any) =>
               block.children?.map((c: any) => c.text).join("") || ""
             )
             .join("\n");
 
-          // Get logo URL
-          const logoUrl = item.logo?.url
-            ? STRAPI_URL + item.logo.url
-            : undefined;
+          // L O G O
+          const logoUrl = getStrapiMedia(item.logo?.url);
 
-          // Get slider images
+          // S L I D E R
           const sliderUrls =
-            item.sliderImage?.map((img: any) => (img.url ? STRAPI_URL + img.url : null)).filter(Boolean) || [];
+            item.sliderImage
+              ?.map((img: any) => getStrapiMedia(img.url))
+              .filter(Boolean) || [];
 
-          const foundationItem: FoundationItem = {
+          setFoundation({
             description: descriptionText,
             logo: logoUrl,
             slider: sliderUrls,
-          };
-          setFoundation(foundationItem);
+          });
         }
-      })
-      .catch((err) => console.error("Error fetching foundation data:", err));
+      } catch (error) {
+        console.error("Error fetching foundation:", error);
+      }
+    };
+
+    fetchFoundation();
   }, []);
 
-  // Autoplay slider
+  // Auto slider
   useEffect(() => {
     if (!foundation?.slider || foundation.slider.length <= 1) return;
 
@@ -61,13 +76,13 @@ export default function FoundationSection() {
   }, [foundation?.slider]);
 
   const nextSlide = () =>
-    setCurrent(
-      (prev) => (prev + 1) % (foundation?.slider?.length || 1)
-    );
+    setCurrent((prev) => (prev + 1) % (foundation?.slider?.length || 1));
 
   const prevSlide = () =>
     setCurrent(
-      (prev) => (prev - 1 + (foundation?.slider?.length || 1)) % (foundation?.slider?.length || 1)
+      (prev) =>
+        (prev - 1 + (foundation?.slider?.length || 1)) %
+        (foundation?.slider?.length || 1)
     );
 
   if (!foundation) {
@@ -78,7 +93,7 @@ export default function FoundationSection() {
     <section className="h-screen w-full flex items-center bg-[#fdf2df] shadow-lg p-4 md:p-16 poppins">
       <div className="w-full md:w-[97%] mx-auto bg-white overflow-hidden h-[80vh]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 h-full">
-          {/* Left Side (Content) */}
+          {/* LEFT CONTENT */}
           <div className="md:col-span-4 flex flex-col space-y-4 p-4 md:p-6 h-full">
             {foundation.logo && (
               <Image
@@ -87,6 +102,7 @@ export default function FoundationSection() {
                 width={300}
                 height={113}
                 className="object-contain mb-2 mx-auto"
+                priority
               />
             )}
             <p className="text-gray-700 text-sm md:text-base leading-relaxed text-center md:text-left">
@@ -94,11 +110,11 @@ export default function FoundationSection() {
             </p>
           </div>
 
-          {/* Right Side (Slider) */}
+          {/* RIGHT SLIDER */}
           <div className="md:col-span-8 relative w-full h-full overflow-hidden">
             {foundation.slider && foundation.slider.length > 0 && (
               <Image
-                key={current}
+                key={current} // forces re-render for smooth animation
                 src={foundation.slider[current]!}
                 alt={`Slide ${current + 1}`}
                 fill
@@ -109,7 +125,7 @@ export default function FoundationSection() {
               />
             )}
 
-            {/* Controls: show only if more than one image */}
+            {/* NAV BUTTONS */}
             {foundation.slider && foundation.slider.length > 1 && (
               <>
                 <button

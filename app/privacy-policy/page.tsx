@@ -2,14 +2,15 @@ import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Metadata as NextMetadata } from "next";
+import { getStrapiMedia } from "@/lib/media";
 
-// ----------------------
+// ------------------------------------
 // Types
-// ----------------------
+// ------------------------------------
 interface Section {
   title: string;
-  description: string[] | string;
-  image?: string;
+  description: string[];
+  image?: string | null;
 }
 
 interface PageData {
@@ -18,7 +19,7 @@ interface PageData {
   banner: {
     title?: string;
     heading?: string;
-    image?: string;
+    image?: string | null;
   };
   sections: Section[];
   meta?: {
@@ -26,14 +27,14 @@ interface PageData {
     metaDescription?: string;
     metaKeywords?: string;
     canonicalURL?: string;
-    metaImage?: string;
+    metaImage?: string | null;
   };
 }
 
-// ----------------------
+// ------------------------------------
 // Fetch function
-// ----------------------
-async function getPrivacyPolicyData(): Promise<any> {
+// ------------------------------------
+async function getPrivacyPolicyData() {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/privacy-policy?populate[Metadata][populate]=*&populate[pagebanner][populate]=*&populate[CommonSection][populate]=*`,
@@ -41,6 +42,7 @@ async function getPrivacyPolicyData(): Promise<any> {
     );
 
     if (!res.ok) throw new Error("Failed to fetch privacy policy data");
+
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -49,14 +51,18 @@ async function getPrivacyPolicyData(): Promise<any> {
   }
 }
 
-// ----------------------
-// Generate metadata dynamically
-// ----------------------
+// ------------------------------------
+// Metadata
+// ------------------------------------
 export async function generateMetadata(): Promise<NextMetadata> {
   const data = await getPrivacyPolicyData();
   if (!data) return {};
 
   const meta = data.Metadata || {};
+
+  const metaImage = meta.metaImage?.url
+    ? getStrapiMedia(meta.metaImage.url)
+    : "/default-og-image.jpg";
 
   return {
     title: meta.metaTitle || "Privacy Policy | Namakwala",
@@ -69,78 +75,74 @@ export async function generateMetadata(): Promise<NextMetadata> {
       title: meta.metaTitle || data.title,
       description: meta.metaDescription,
       url: meta.canonicalURL || "https://www.namakwala.in/privacy-policy",
-      images: meta.metaImage?.url
-        ? [`${process.env.NEXT_PUBLIC_STRAPI_URL}${meta.metaImage.url}`]
-        : ["/default-og-image.jpg"],
+      images: [metaImage],
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: meta.metaTitle || data.title,
       description: meta.metaDescription,
-      images: meta.metaImage?.url
-        ? [`${process.env.NEXT_PUBLIC_STRAPI_URL}${meta.metaImage.url}`]
-        : ["/default-og-image.jpg"],
+      images: [metaImage],
     },
   };
 }
 
-// ----------------------
+// ------------------------------------
 // Component
-// ----------------------
+// ------------------------------------
 export default async function PrivacyPolicyPage() {
   const data = await getPrivacyPolicyData();
-
   if (!data) return notFound();
 
+  // -------------------------------
+  // Convert Strapi → Frontend shape
+  // -------------------------------
   const page: PageData = {
     title: data.title,
     description: data.description?.[0]?.children?.[0]?.text || "",
+
     banner: {
       title: data.pagebanner?.title,
       heading: data.pagebanner?.heading,
-      image:
-        data.pagebanner?.image?.url &&
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}${data.pagebanner.image.url}`,
+      image: getStrapiMedia(data.pagebanner?.image?.url),
     },
+
     sections:
       data.CommonSection?.map((item: any) => ({
         title: item.title,
-        description: Array.isArray(item.description)
-          ? item.description
-              .map((d: any) =>
-                d.children?.map((c: any) => c.text).join(" ")
-              )
-              .filter(Boolean)
-          : [],
-        image:
-          item.image?.url &&
-          `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`,
+        description: (item.description || [])
+          .map((d: any) =>
+            d.children?.map((c: any) => c.text).join(" ")
+          )
+          .filter(Boolean),
+        image: getStrapiMedia(item.image?.url),
       })) || [],
+
     meta: data.Metadata && {
       metaTitle: data.Metadata.metaTitle,
       metaDescription: data.Metadata.metaDescription,
       metaKeywords: data.Metadata.metaKeywords,
       canonicalURL: data.Metadata.canonicalURL,
-      metaImage:
-        data.Metadata.metaImage?.url &&
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}${data.Metadata.metaImage.url}`,
+      metaImage: getStrapiMedia(data.Metadata.metaImage?.url),
     },
   };
 
+  // ------------------------------------
+  // Page Render
+  // ------------------------------------
   return (
     <section className="relative poppins">
-      {/* ✅ Banner */}
+      {/* Banner */}
       <PageBanner
         title={page.banner.title || ""}
         image={page.banner.image || "/optimized/fallback-image.jpg"}
         category={page.banner.heading || ""}
-        priority={true}
+        priority
       />
 
-      {/* ✅ Main Content */}
+      {/* Content */}
       <div className="w-auto bg-[#d2ab67] mx-auto px-6 py-12 space-y-24">
-        {/* Intro Section */}
+        {/* Intro */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <h1 className="text-4xl md:text-5xl playfair text-white font-extrabold animate-slideUp">
             {page.title}
@@ -148,8 +150,8 @@ export default async function PrivacyPolicyPage() {
           <p className="text-lg md:text-xl text-white">{page.description}</p>
         </div>
 
-        {/* ✅ Dynamic Sections */}
-        {page.sections.map((section: Section, idx: number) => {
+        {/* Sections */}
+        {page.sections.map((section, idx) => {
           const isEven = idx % 2 === 0;
 
           return (
@@ -159,7 +161,7 @@ export default async function PrivacyPolicyPage() {
                 isEven ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              {/* Text Content */}
+              {/* Text */}
               <div
                 className="md:w-1/2 bg-white p-8 md:p-12 shadow-2xl z-10 relative hover:scale-105 transition-transform duration-300"
                 style={{ minHeight: "320px" }}
@@ -167,21 +169,16 @@ export default async function PrivacyPolicyPage() {
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 playfair text-gradient">
                   {section.title}
                 </h2>
-                {Array.isArray(section.description) ? (
-                  <div className="space-y-3 text-gray-700">
-                    {section.description.map((text: string, i: number) => (
-                      <p key={i} className="leading-relaxed">
-                        {text}
-                      </p>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-gray-700 leading-relaxed">{section.description}</p>
-                )}
-
+                <div className="space-y-3 text-gray-700">
+                  {section.description.map((text, i) => (
+                    <p key={i} className="leading-relaxed">
+                      {text}
+                    </p>
+                  ))}
+                </div>
               </div>
 
-              {/* Overlapping Image */}
+              {/* Image */}
               {section.image && (
                 <div
                   className={`md:w-1/2 mt-8 md:mt-0 relative md:-top-8 ${

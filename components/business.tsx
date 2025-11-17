@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getStrapiMedia } from "@/lib/media";
 
 type Business = {
   title: string;
@@ -16,35 +17,52 @@ export default function BusinessSection() {
   const [businesses, setBusinesses] = useState<Business[]>([]);
   const [active, setActive] = useState(0);
 
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL; // if images are relative
+  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
 
   useEffect(() => {
-    fetch(`${STRAPI_URL}/api/product-tabs?populate=*`)
-      .then((res) => res.json())
-      .then((data) => {
+    async function fetchBusinesses() {
+      try {
+        const res = await fetch(
+          `${STRAPI_URL}/api/product-tabs?populate=*`,
+          { cache: "force-cache" }
+        );
+
+        const data = await res.json();
+
         if (data?.data?.length > 0) {
           const formatted: Business[] = data.data.map((item: any) => {
             const bg = item.backgroundImage?.[0];
-            const imageUrl =
-              bg?.url || bg?.formats?.thumbnail?.url || "";
-            
-            // Convert description array to plain text
+
+            const imageUrl = getStrapiMedia(
+              bg?.url ||
+                bg?.formats?.large?.url ||
+                bg?.formats?.medium?.url ||
+                bg?.formats?.thumbnail?.url
+            );
+
             const descriptionText = (item.description || [])
-              .map((block: any) => block.children?.map((c: any) => c.text).join("") || "")
+              .map((block: any) =>
+                block.children?.map((c: any) => c.text).join("") || ""
+              )
               .join("\n");
 
             return {
               title: item.title || "",
               description: descriptionText,
-              bannerImage: imageUrl ? STRAPI_URL + imageUrl : "",
+              bannerImage: imageUrl,
               slug: (item.buttonLink || "").replace(/^\//, ""),
               buttonText: item.buttonText || "View More",
             };
           });
+
           setBusinesses(formatted);
         }
-      })
-      .catch((err) => console.error("Error fetching product tabs:", err));
+      } catch (err) {
+        console.error("Error fetching product tabs:", err);
+      }
+    }
+
+    fetchBusinesses();
   }, []);
 
   if (!businesses.length) {
@@ -59,11 +77,12 @@ export default function BusinessSection() {
         style={{ backgroundImage: `url(${businesses[active].bannerImage})` }}
       ></div>
 
-      {/* Shadow / Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-80 shadow-inner"></div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col md:flex-row h-full w-full md:w-[95%] mx-auto">
+        
         {/* Tabs */}
         <div className="flex flex-wrap md:flex-col order-1 md:order-2 w-full md:w-1/3 p-4 md:p-12 text-white md:justify-center">
           {businesses.map((b, index) => (
@@ -82,7 +101,7 @@ export default function BusinessSection() {
           ))}
         </div>
 
-        {/* Content */}
+        {/* Content Section */}
         <div className="order-2 md:order-1 w-full md:w-2/3 p-4 md:p-12 flex flex-col justify-center text-white">
           <span className="flex items-center gap-3 text-lg md:text-2xl font-semibold mb-4 md:mb-6 uppercase">
             <Image
@@ -91,6 +110,7 @@ export default function BusinessSection() {
               width={80}
               height={80}
               className="object-contain"
+              priority
             />
             <span>Our Businesses</span>
           </span>
@@ -99,7 +119,7 @@ export default function BusinessSection() {
             {businesses[active].title}
           </h1>
 
-          <p className="whitespace-pre-line text-sm md:text-base leading-relaxedt">
+          <p className="whitespace-pre-line text-sm md:text-base leading-relaxed">
             {businesses[active].description}
           </p>
 

@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Globe, TrendingUp, Shield } from "lucide-rea
 import Image from "next/image";
 import YearsOfExcellence from "./YearsOfExcellence";
 import Link from "next/link";
+import { getStrapiMedia } from "@/lib/media"; // ✅ added
 
 const features = [
   { icon: Globe, text: "21+ Countries" },
@@ -29,52 +30,50 @@ export default function HeroSection() {
   const [banners, setBanners] = useState<HeroBannerData[]>([]);
 
   useEffect(() => {
-  async function fetchBanners() {
-    try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/home-banners?populate=*`
-      );
-      const data = await res.json();
-
-      if (!data.data) return;
-
-      const mapped = data.data
-        .map((item: any) => {
-          const desc = item.description
-            ?.map((block: any) =>
-              block.children?.map((c: any) => c.text).join(" ")
-            )
-            .join(" ") || "";
-
-          // Safely handle image URL
-          const imageUrl =
-            item.image?.url
-              ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`
-              : "/optimized/placeholder-large.webp";
-          return {
-            id: item.id,
-            title: item.title,
-            subtitle: item.subtitle,
-            description: desc,
-            buttonText: item.buttonText,
-            buttonLink: item.buttonLink,
-            bannerPosition: item.bannerPositions,
-            imageUrl,
-          };
-        })
-        .sort((a: HeroBannerData, b: HeroBannerData) =>
-          (a.bannerPosition || "0").localeCompare(b.bannerPosition || "0")
+    async function fetchBanners() {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/home-banners?populate=*`
         );
+        const data = await res.json();
 
-      setBanners(mapped);
-    } catch (err) {
-      console.error("Error fetching banners:", err);
+        if (!data.data) return;
+
+        const mapped = data.data
+          .map((item: any) => {
+            const desc =
+              item.description
+                ?.map((block: any) =>
+                  block.children?.map((c: any) => c.text).join(" ")
+                )
+                .join(" ") || "";
+
+            // ✅ use getStrapiMedia here
+            const imageUrl = getStrapiMedia(item.image?.url) || "/optimized/placeholder-large.webp";
+
+            return {
+              id: item.id,
+              title: item.title,
+              subtitle: item.subtitle,
+              description: desc,
+              buttonText: item.buttonText,
+              buttonLink: item.buttonLink,
+              bannerPosition: item.bannerPositions,
+              imageUrl,
+            };
+          })
+          .sort((a: HeroBannerData, b: HeroBannerData) =>
+            (a.bannerPosition || "0").localeCompare(b.bannerPosition || "0")
+          );
+
+        setBanners(mapped);
+      } catch (err) {
+        console.error("Error fetching banners:", err);
+      }
     }
-  }
 
-  fetchBanners();
-}, []);
-
+    fetchBanners();
+  }, []);
 
   // Slider interval
   useEffect(() => {
@@ -105,7 +104,7 @@ export default function HeroSection() {
             }`}
           >
             <Image
-              src={slide.imageUrl}
+              src={slide.imageUrl} // ✔ now optimized URL
               alt={slide.title || "Banner"}
               fill
               className="object-cover"
@@ -115,6 +114,7 @@ export default function HeroSection() {
               placeholder="blur"
               blurDataURL="/optimized/placeholder-large.webp"
             />
+            <h1> Namakwala </h1>
             <div className="absolute inset-0 hero-gradient opacity-80"></div>
           </div>
         ))}

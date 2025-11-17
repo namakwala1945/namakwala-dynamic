@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { fastFetch } from "@/lib/fetcher";
+import { getStrapiMedia } from "@/lib/media";
 
 interface LifeAtNamakwala {
   title: string;
@@ -11,43 +13,52 @@ interface LifeAtNamakwala {
 
 export default function LifeAtNamakwala() {
   const [data, setData] = useState<LifeAtNamakwala | null>(null);
-  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || `${process.env.NEXT_PUBLIC_STRAPI_URL}`;
+
+  const BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
 
   useEffect(() => {
-    const fetchLifeAtNamakwala = async () => {
+    const loadData = async () => {
+      if (!BASE_URL) {
+        console.error("❌ Missing NEXT_PUBLIC_STRAPI_URL");
+        return;
+      }
+
       try {
-        const res = await fetch(`${STRAPI_URL}/api/life-at-namakwalas?populate=*`, {
-          cache: "no-store",
-        });
-        const json = await res.json();
+        const json = await fastFetch(
+          `${BASE_URL}/api/life-at-namakwalas?populate=*`
+        );
+
         const item = json?.data?.[0];
         if (!item) return;
 
-        // Extract title
+        // ✔ Extract Title
         const title = item.title || "Life at Namakwala";
 
-        // Extract rich text description
+        // ✔ Rich text → Plain text conversion
         const description =
           item.description
             ?.map((block: any) =>
               block.children?.map((child: any) => child.text).join("") || ""
             )
-            .join("\n") || "";
+            .join("\n") || "Experience vibrant culture and teamwork at Namakwala.";
 
-        // Extract images
+        // ✔ Extract Images with getStrapiMedia
         const images =
-          item.image?.map((img: any) => ({
-            src: img.url.startsWith("http") ? img.url : `${STRAPI_URL}${img.url}`,
-            alt: img.alternativeText || img.name || "Life at Namakwala",
-          })) || [];
+          item.image?.map((img: any) => {
+            const src = getStrapiMedia(img?.url) || "/placeholder.png";
+            return {
+              src,
+              alt: img?.alternativeText || img?.name || "Life at Namakwala",
+            };
+          }) || [];
 
         setData({ title, description, images });
       } catch (err) {
-        console.error("❌ Error fetching Life at Namakwala:", err);
+        console.error("❌ API Fetch Error:", err);
       }
     };
 
-    fetchLifeAtNamakwala();
+    loadData();
   }, []);
 
   if (!data) {
@@ -62,8 +73,8 @@ export default function LifeAtNamakwala() {
     <section className="relative">
       <div className="bg-[#d2ab67] px-4 sm:px-6 lg:px-16 py-6 sm:py-8 lg:py-12 poppins">
         <div className="w-full md:w-[97%] mx-auto bg-white p-2 sm:p-4 md:p-6 lg:p-6 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 items-start">
-          
-          {/* Left Image Grid */}
+
+          {/* LEFT IMAGE GRID */}
           <div className="grid grid-cols-2 sm:grid-cols-2 gap-2 sm:gap-4">
             {data.images.map((img, idx) => (
               <div
@@ -82,11 +93,12 @@ export default function LifeAtNamakwala() {
             ))}
           </div>
 
-          {/* Right Content */}
+          {/* RIGHT CONTENT */}
           <div className="text-gray-700 space-y-2 sm:space-y-4 text-center lg:text-left mt-4 lg:mt-0">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl playfair font-bold">
               {data.title}
             </h1>
+
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-justify whitespace-pre-line">
               {data.description}
             </p>

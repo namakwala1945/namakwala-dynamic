@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import { getStrapiMedia } from "@/lib/media"; // ✅ ADDED
 
 interface MediaFile {
   url: string;
@@ -10,8 +11,8 @@ interface MediaFile {
 
 interface MediaItem {
   title: string;
-  url?: string; // YouTube or video URL
-  media?: MediaFile[]; // Uploaded images/videos
+  url?: string; // YouTube or direct video url
+  media?: MediaFile[];
 }
 
 interface MediaType {
@@ -29,6 +30,9 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // -------------------------------------------------
+  // 🚀 Compute Active Media (Fast + Strapi URL Fix)
+  // -------------------------------------------------
   const activeMedia = useMemo(() => {
     const type = mediaTypes.find((t) => t.id === activeTab);
     if (!type) return [];
@@ -37,7 +41,7 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
       type.Media?.flatMap((m) => {
         const items: any[] = [];
 
-        // 🎥 1. If URL is provided → treat as video
+        // 🎥 Direct YouTube / Video URL
         if (m.url) {
           items.push({
             type: "video",
@@ -46,13 +50,15 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
           });
         }
 
-        // 🖼️ 2. If media uploads exist → treat as image
+        // 🖼️ Uploaded Media
         if (m.media?.length) {
           m.media.forEach((file) => {
-            const isVideo = file.url.match(/\.(mp4|mov|webm)$/i);
+            const fixedUrl = getStrapiMedia(file.url); // <-- FIXED URL
+            const isVideo = fixedUrl?.match(/\.(mp4|mov|webm)$/i);
+
             items.push({
               type: isVideo ? "video" : "image",
-              url: file.url,
+              url: fixedUrl || "",
               title: file.alternativeText || m.title || "Untitled",
             });
           });
@@ -63,6 +69,9 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
     );
   }, [mediaTypes, activeTab]);
 
+  // -------------------------------------------------
+  // Lightbox Functions
+  // -------------------------------------------------
   const openLightbox = (idx: number) => {
     setCurrentIndex(idx);
     setIsOpen(true);
@@ -70,9 +79,13 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
 
   const nextMedia = () =>
     setCurrentIndex((prev) => (prev + 1) % activeMedia.length);
+
   const prevMedia = () =>
     setCurrentIndex((prev) => (prev - 1 + activeMedia.length) % activeMedia.length);
 
+  // -------------------------------------------------
+  // Extract YouTube ID
+  // -------------------------------------------------
   const getYouTubeID = (url: string) => {
     const match = url.match(
       /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
@@ -82,7 +95,9 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
 
   return (
     <div className="w-full">
-      {/* ✅ Tabs */}
+      {/* -------------------------------
+        Tabs
+      -------------------------------- */}
       <div className="flex space-x-4 mb-8 justify-center flex-wrap">
         {mediaTypes.map((tab) => (
           <button
@@ -103,7 +118,9 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
         ))}
       </div>
 
-      {/* ✅ Media Grid */}
+      {/* -------------------------------
+        Media Grid
+      -------------------------------- */}
       {activeMedia.length === 0 ? (
         <div className="text-center text-gray-500 py-10">
           No media available right now.
@@ -113,12 +130,11 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
           {activeMedia.map((item, idx) => {
             const isVideo = item.type === "video";
             const youtubeId = isVideo ? getYouTubeID(item.url) : null;
+
             const thumb = isVideo
               ? youtubeId
                 ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
-                : item.url.match(/\.(mp4|mov|webm)$/i)
-                ? "/fallback-video-thumb.jpg"
-                : "/fallback-image.jpg"
+                : "/fallback-video-thumb.jpg"
               : item.url || "/fallback-image.jpg";
 
             return (
@@ -136,6 +152,7 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
                   priority
                   unoptimized
                 />
+
                 {isVideo && (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-black/50 rounded-full p-3">
@@ -151,6 +168,7 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
                     </div>
                   </div>
                 )}
+
                 <div className="absolute bottom-0 w-full bg-black/50 text-white text-sm p-2 text-center">
                   {item.title}
                 </div>
@@ -160,7 +178,9 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
         </div>
       )}
 
-      {/* ✅ Lightbox */}
+      {/* -------------------------------
+        Lightbox
+      -------------------------------- */}
       {isOpen && activeMedia[currentIndex] && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
           {/* Close */}
@@ -185,7 +205,7 @@ export default function NewsMediaTabs({ mediaTypes = [] }: NewsMediaTabsProps) {
             &#8594;
           </button>
 
-          {/* ✅ Lightbox content */}
+          {/* Content */}
           <div className="max-w-5xl w-full max-h-[80vh] flex items-center justify-center">
             {activeMedia[currentIndex].type === "image" ? (
               <Image

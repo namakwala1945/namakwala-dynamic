@@ -3,6 +3,7 @@ import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import Script from "next/script";
 import { notFound } from "next/navigation";
+import { getStrapiMedia } from "@/lib/media"; // ✅ Added helper
 
 // ----------------------
 // Types
@@ -42,7 +43,7 @@ async function getLegalNoticeData(): Promise<LegalNotice | null> {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/legal-notice?populate[Metadata][populate]=*&populate[pagebanner][populate]=*&populate[CommonSection][populate]=*`,
-      { next: { revalidate: 60 } } // ISR caching
+      { cache: "no-store" } // ⚡ Faster fresh fetch
     );
 
     if (!res.ok) throw new Error("Failed to fetch Legal Notice data");
@@ -52,33 +53,30 @@ async function getLegalNoticeData(): Promise<LegalNotice | null> {
     const legalNotice: LegalNotice = {
       title: data.title,
       description: data.description?.[0]?.children?.[0]?.text || "",
+
       banner: {
         title: data.pagebanner?.title || "",
         heading: data.pagebanner?.heading || "",
-        image: data.pagebanner?.image?.url
-          ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${data.pagebanner.image.url}`
-          : undefined,
+        image: getStrapiMedia(data.pagebanner?.image?.url || null) || undefined, // ✅ safe
       },
+
       sections:
         data.CommonSection?.map((section: any) => ({
           title: section.title,
           description:
             section.description
-              ?.map((d: any) =>
-                d.children?.map((c: any) => c.text).join(" ")
-              )
+              ?.map((d: any) => d.children?.map((c: any) => c.text).join(" "))
               .join("\n") || "",
-          image: section.image?.url
-            ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${section.image.url}`
-            : undefined,
+          image: getStrapiMedia(section.image?.url || null) || undefined, // ✅ safe URL
         })) || [],
+
       metadata: data.Metadata || {},
     };
 
-    // Debug: print all image URLs
+    // Debug
     console.log("🖼 Banner Image:", legalNotice.banner.image);
     legalNotice.sections.forEach((s, i) =>
-      console.log(`🖼 Section ${i + 1} Image:`, s.image)
+      console.log(`🖼 Section ${i + 1}:`, s.image)
     );
 
     return legalNotice;
@@ -115,18 +113,8 @@ export default async function LegalNoticePage() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://www.namakwala.in/",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Legal Notice",
-              item: "https://www.namakwala.in/legal-notice",
-            },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.namakwala.in/" },
+            { "@type": "ListItem", position: 2, name: "Legal Notice", item: "https://www.namakwala.in/legal-notice" },
           ],
         })}
       </Script>
@@ -139,9 +127,8 @@ export default async function LegalNoticePage() {
         priority={true}
       />
 
-      {/* ✅ Main Content */}
+      {/* Main Content */}
       <div className="w-full mx-auto px-6 py-16 space-y-28">
-        {/* Intro */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl playfair text-gradient font-extrabold animate-slideUp">
             {page.title}

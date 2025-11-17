@@ -1,6 +1,9 @@
+// app/fraud-alert/page.tsx
+
 import PageBanner from "@/components/PageBanner";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { getStrapiMedia } from "@/lib/media"; // ✅ Added helper
 
 // ----------------------
 // Types
@@ -45,23 +48,30 @@ async function getFraudAlertData(): Promise<FraudAlert | null> {
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/fraud-alert?populate[Metadata][populate]=*&populate[pagebanner][populate]=*&populate[CommonSection][populate]=*`,
-      { next: { revalidate: 60 } }
+      { cache: "no-store" } // ⚡ always fresh
     );
 
     if (!res.ok) throw new Error("Failed to fetch Fraud Alert data");
+
     const { data } = await res.json();
 
     const fraudAlert: FraudAlert = {
       title: data.title,
       description:
         data.description?.[0]?.children?.[0]?.text || "Stay alert for fraud.",
+
+      // ----------------------
+      // ✅ Banner Image Fix using getStrapiMedia
+      // ----------------------
       banner: {
         title: data.pagebanner?.title || "",
         heading: data.pagebanner?.heading || "",
-        image: data.pagebanner?.image?.url
-          ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${data.pagebanner.image.url}`
-          : undefined,
+        image: getStrapiMedia(data.pagebanner?.image?.url || null) || undefined,
       },
+
+      // ----------------------
+      // Sections
+      // ----------------------
       sections:
         data.CommonSection?.map((section: any) => ({
           title: section.title,
@@ -69,10 +79,13 @@ async function getFraudAlertData(): Promise<FraudAlert | null> {
             section.description?.map(
               (p: any) => p.children?.map((c: any) => c.text).join(" ")
             ) || [],
-          image: section.image?.url
-            ? `${process.env.NEXT_PUBLIC_STRAPI_URL}${section.image.url}`
-            : undefined,
+          image:
+            getStrapiMedia(section.image?.url || null) || undefined, // ✅ safe conversion
         })) || [],
+
+      // ----------------------
+      // Metadata
+      // ----------------------
       metadata: {
         title: data.Metadata?.title || "",
         description:
@@ -94,12 +107,6 @@ async function getFraudAlertData(): Promise<FraudAlert | null> {
         },
       },
     };
-
-    // Debug
-    console.log("🖼 Banner Image:", fraudAlert.banner.image);
-    fraudAlert.sections.forEach((s, i) =>
-      console.log(`🖼 Section ${i + 1}:`, s.image)
-    );
 
     return fraudAlert;
   } catch (error) {
@@ -142,16 +149,15 @@ export default async function FraudAlertPage() {
 
   return (
     <section className="relative poppins w-auto bg-[#d2ab67] mx-auto">
-      {/* ✅ Page Banner */}
+      {/* Page Banner */}
       <PageBanner
         title={page.banner.title}
         image={page.banner.image || "/optimized/fallback-image.jpg"}
         category={page.banner.heading}
       />
 
-      {/* ✅ Main Content */}
+      {/* Main Content */}
       <div className="container mx-auto px-6 py-12 space-y-24">
-        {/* Intro */}
         <div className="text-center max-w-3xl mx-auto space-y-4 animate-fadeIn text-white">
           <h1 className="text-4xl md:text-5xl playfair font-extrabold animate-slideUp">
             {page.title}
@@ -161,7 +167,7 @@ export default async function FraudAlertPage() {
           </p>
         </div>
 
-        {/* ✅ Sections */}
+        {/* Sections */}
         {page.sections.map((section, idx) => {
           const isEven = idx % 2 === 0;
 
@@ -172,7 +178,7 @@ export default async function FraudAlertPage() {
                 isEven ? "md:flex-row" : "md:flex-row-reverse"
               } animate-fadeIn`}
             >
-              {/* Text */}
+              {/* Text Box */}
               <div
                 className="md:w-1/2 bg-white p-8 md:p-12 shadow-2xl z-10 relative hover:scale-105 transition-transform duration-300"
                 style={{ minHeight: "320px" }}
@@ -180,6 +186,7 @@ export default async function FraudAlertPage() {
                 <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 playfair text-gradient">
                   {section.title}
                 </h2>
+
                 {Array.isArray(section.description) &&
                 section.description.length > 1 ? (
                   <ul className="list-disc list-inside text-gray-700 space-y-2">
