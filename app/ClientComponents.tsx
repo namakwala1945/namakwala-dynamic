@@ -3,16 +3,55 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Loader from "@/components/Loader/Loader";
-import ContentProtector from "./ContentProtector"; // <-- Added
+import ContentProtector from "./ContentProtector"; 
 
-// Load CustomCursor only on client
-const CustomCursor = dynamic(() => import("@/components/Cursor"), { ssr: false });
+const CustomCursor = dynamic(() => import("@/components/Cursor"), {
+  ssr: false,
+});
 
 export default function ClientComponents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Google Translate callback
+    let imagesLoaded = false;
+    let translateLoaded = false;
+
+    // --- IMAGE LOAD CHECK ---
+    const checkImagesLoaded = () => {
+      const total = document.images.length;
+      if (total === 0) {
+        imagesLoaded = true;
+        return finishLoading();
+      }
+
+      let count = 0;
+      for (const img of document.images) {
+        if (img.complete) {
+          count++;
+          if (count === total) {
+            imagesLoaded = true;
+            finishLoading();
+          }
+          continue;
+        }
+        img.addEventListener("load", () => {
+          count++;
+          if (count === total) {
+            imagesLoaded = true;
+            finishLoading();
+          }
+        });
+        img.addEventListener("error", () => {
+          count++;
+          if (count === total) {
+            imagesLoaded = true;
+            finishLoading();
+          }
+        });
+      }
+    };
+
+    // --- GOOGLE TRANSLATE CHECK ---
     // @ts-ignore
     window.googleTranslateElementInit = () => {
       // @ts-ignore
@@ -20,21 +59,36 @@ export default function ClientComponents() {
         { pageLanguage: "en" },
         "google_translate_element"
       );
+      translateLoaded = true;
+      finishLoading();
     };
 
-    // Load the Google Translate script
     const script = document.createElement("script");
     script.src =
       "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
     script.async = true;
     document.body.appendChild(script);
 
-    // Hide loader only when full page loads
-    const onPageLoaded = () => setLoading(false);
-    window.addEventListener("load", onPageLoaded);
+    // --- FALLBACK TIMEOUT (loader never stuck) ---
+    const timeout = setTimeout(() => {
+      imagesLoaded = true;
+      translateLoaded = true;
+      finishLoading();
+    }, 2500);
+
+    // --- FINAL UNLOCK ---
+    const finishLoading = () => {
+      if (imagesLoaded && translateLoaded) {
+        clearTimeout(timeout);
+        setLoading(false);
+      }
+    };
+
+    // start image check
+    checkImagesLoaded();
 
     return () => {
-      window.removeEventListener("load", onPageLoaded);
+      clearTimeout(timeout);
       document.body.removeChild(script);
     };
   }, []);
@@ -43,10 +97,9 @@ export default function ClientComponents() {
     <>
       <Loader show={loading} />
 
-      {/* 🔒 Content Protection Active on Entire Website */}
+      {/* 🔒 Block copy, right click, inspect, select */}
       <ContentProtector />
 
-      {/* ✨ Custom cursor appears only after loading */}
       {!loading && <CustomCursor />}
     </>
   );
