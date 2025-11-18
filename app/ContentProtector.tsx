@@ -3,28 +3,45 @@ import { useEffect } from "react";
 
 export default function ContentProtector() {
   useEffect(() => {
-    // Disable right-click
-    const handleContextMenu = (e: MouseEvent) => e.preventDefault();
-    document.addEventListener("contextmenu", handleContextMenu);
+    // Disable text selection
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
 
-    // Disable key shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {
+    // Disable drag
+    const blockDrag = (e: DragEvent) => e.preventDefault();
+    document.addEventListener("dragstart", blockDrag);
+
+    // Disable right-click
+    const disableRightClick = (e: MouseEvent) => e.preventDefault();
+    document.addEventListener("contextmenu", disableRightClick);
+
+    // Disable important key shortcuts
+    const disableKeys = (e: KeyboardEvent) => {
+      const key = e.key.toLowerCase();
+
       if (
-        (e.ctrlKey && ["u", "c", "v", "s", "p"].includes(e.key.toLowerCase())) ||
-        (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(e.key.toLowerCase())) ||
-        e.key === "F12"
+        // Ctrl combinations
+        (e.ctrlKey && ["c", "x", "v", "s", "p", "u", "a"].includes(key)) ||
+        // Ctrl + Shift combinations
+        (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
+        // F12
+        key === "f12"
       ) {
         e.preventDefault();
         e.stopPropagation();
       }
     };
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keydown", disableKeys);
 
     return () => {
-      document.removeEventListener("contextmenu", handleContextMenu);
-      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.userSelect = "";
+      document.body.style.webkitUserSelect = "";
+
+      document.removeEventListener("dragstart", blockDrag);
+      document.removeEventListener("contextmenu", disableRightClick);
+      document.removeEventListener("keydown", disableKeys);
     };
   }, []);
 
-  return null; // No UI, just protection
+  return null;
 }
