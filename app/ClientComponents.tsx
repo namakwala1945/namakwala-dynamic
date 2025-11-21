@@ -98,7 +98,7 @@ export default function ClientComponents() {
       <Loader show={loading} />
 
       {/* 🔒 Block copy, right click, inspect, select */}
-      <ContentProtector />
+      {/* <ContentProtector /> */}
 
       {!loading && <CustomCursor />}
     </>
