@@ -29,3 +29,7 @@ yarn-error.log*
 # Strapi specific (optional)
 .tmp/
 .uploads/
+
+public/sitemap-*.xml
+sitemap-*.xml
+public/sitemap-0.xml
