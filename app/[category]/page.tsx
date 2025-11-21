@@ -20,10 +20,12 @@ type CategoryPageItem = {
   technicalSpecifications?: TechnicalSpecification[];
   note?: string;
 
-  // ⭐ Added these missing fields
   footerHeading?: string;
   footerParagraph?: string[];
   footerBackground?: string;
+
+  // ⭐ REQUIRED numeric position (not optional)
+  position: number;
 };
 
 type BannerData = {
@@ -44,13 +46,11 @@ async function fetchCategoryData(category: string): Promise<{
     `${process.env.NEXT_PUBLIC_STRAPI_URL}`;
 
   try {
-    // Fetch products
     const productsRes = await fetch(
       `${strapiUrl}/api/products?filters[category][$eq]=${category}&populate=*`,
       { cache: "no-store" }
     );
 
-    // Fetch banner
     const bannerRes = await fetch(
       `${strapiUrl}/api/pages?filters[slug][$eq]=${category}&populate=bannerImage`,
       { cache: "no-store" }
@@ -59,7 +59,6 @@ async function fetchCategoryData(category: string): Promise<{
     const productsData = await productsRes.json();
     const bannerData = await bannerRes.json();
 
-    // Banner Data
     const banner: BannerData = bannerData?.data?.[0]
       ? {
           title: bannerData.data[0].bannerTitle || "",
@@ -74,8 +73,7 @@ async function fetchCategoryData(category: string): Promise<{
           image: "/optimized/placeholder-large.webp",
         };
 
-    // Map Products
-    const products =
+    const products: CategoryPageItem[] =
       productsData?.data?.map((item: any) => ({
         title: item.Title,
         slug: item.slug,
@@ -108,7 +106,6 @@ async function fetchCategoryData(category: string): Promise<{
           ? strapiUrl + item.productImage.url
           : undefined,
 
-        // ⭐ Added Footer Fields
         footerHeading: item.footerHeading || "",
         footerParagraph:
           item.footerParagraph?.map(
@@ -117,6 +114,9 @@ async function fetchCategoryData(category: string): Promise<{
         footerBackground: item.footerBackground?.url
           ? strapiUrl + item.footerBackground.url
           : undefined,
+
+        // ⭐ Always a number (fix for sorting)
+        position: Number(item.position) || 9999,
       })) || [];
 
     return { products, banner };
@@ -147,9 +147,14 @@ export default async function CategoryPage({
 
   if (!products || products.length === 0) return notFound();
 
+  // ⭐ FIX: Sorting with guaranteed numeric values
+  const sortedProducts = [...products].sort(
+    (a, b) => Number(a.position) - Number(b.position)
+  );
+
   return (
     <section className="relative bg-[#d2ab67] poppins">
-      {/* Hero Banner */}
+      {/* Page Banner */}
       <div className="inset-0 top-0 playfair">
         <PageBanner
           title={banner.title}
@@ -158,14 +163,12 @@ export default async function CategoryPage({
         />
       </div>
 
-      {/* Smooth scroll */}
       <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
         <HashScroll />
       </Suspense>
 
-      {/* Products section */}
       <div className="w-auto bg-[#d2ab67] mx-auto px-6 py-12 space-y-24">
-        {products.map((page, idx) => (
+        {sortedProducts.map((page, idx) => (
           <section
             id={page.slug}
             key={page.slug}
@@ -173,7 +176,7 @@ export default async function CategoryPage({
               idx % 2 === 0 ? "bg-white" : "bg-gray-50"
             } shadow-md px-6 py-12 lg:px-10`}
           >
-            {/* About Product */}
+            {/* Product Header Section */}
             <div className="grid lg:grid-cols-2 gap-10 items-start">
               {page.productImage && (
                 <div className="flex w-auto justify-center overflow-hidden">
@@ -184,7 +187,7 @@ export default async function CategoryPage({
                     height={400}
                     priority
                     quality={70}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1920px"
+                    sizes="100vw"
                   />
                 </div>
               )}
@@ -217,7 +220,7 @@ export default async function CategoryPage({
 
             {/* Key Features + Technical Specs */}
             <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Key Features*/}
+              {/* Key Features */}
               <div className="bg-[#fdf2df] border border-[#d2ab67] shadow-lg overflow-hidden">
                 <div className="px-6 py-2 border-b border-[#d2ab67] text-2xl leading-[1.8]">
                   <h3 className="playfair font-extrabold text-gradient text-center">
@@ -263,7 +266,7 @@ export default async function CategoryPage({
                 </div>
               </div>
 
-              {/* Technical Specs */}
+              {/* Technical Specifications */}
               <div className="bg-[#fdf2df] border border-[#d2ab67] shadow-lg overflow-hidden">
                 <div className="px-6 py-2 border-b border-[#d2ab67] text-2xl leading-[1.8]">
                   <h3 className="playfair font-extrabold text-gradient text-center">
@@ -317,31 +320,38 @@ export default async function CategoryPage({
               </div>
             </div>
 
-            {/* Product Footer */}
-            {Array.isArray(page?.footerParagraph) && page.footerParagraph.length > 0 ? (
-            <div className="relative mt-12 overflow-hidden shadow-lg">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: `url(${page.footerBackground ?? page.productImage ?? "/assets/placeholder.jpg"})`,
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/70" />
+            {/* Footer */}
+            {Array.isArray(page.footerParagraph) &&
+            page.footerParagraph.length > 0 ? (
+              <div className="relative mt-12 overflow-hidden shadow-lg">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${
+                      page.footerBackground ??
+                      page.productImage ??
+                      "/assets/placeholder.jpg"
+                    })`,
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/70" />
 
-              <div className="relative z-10 p-10 text-center">
-                <h4 className="text-2xl font-bold mb-4 text-white">
-                  {page.footerHeading || `Why choose ${page.title}?`}
-                </h4>
+                <div className="relative z-10 p-10 text-center">
+                  <h4 className="text-2xl font-bold mb-4 text-white">
+                    {page.footerHeading || `Why choose ${page.title}?`}
+                  </h4>
 
-                {page.footerParagraph.map((para, idx) => (
-                  <p key={idx} className="text-white text-lg leading-relaxed mb-2">
-                    {para}
-                  </p>
-                ))}
+                  {page.footerParagraph.map((para, idx) => (
+                    <p
+                      key={idx}
+                      className="text-white text-lg leading-relaxed mb-2"
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
-          ) : null}
-
+            ) : null}
           </section>
         ))}
       </div>
